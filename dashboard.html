@@ -4,7 +4,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ledford Case Dashboard</title>
 <style>
-/* Catppuccin Mocha palette */
 :root {
   --base: #1e1e2e; --mantle: #181825; --crust: #11111b;
   --surface0: #313244; --surface1: #45475a; --surface2: #585b70;
@@ -16,31 +15,25 @@
   --flamingo: #f2cdcd; --rosewater: #f5e0dc;
 }
 * { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: 'Segoe UI', Arial, sans-serif; background: var(--base); color: var(--text); padding: 16px; }
-h1 { text-align: center; color: var(--mauve); font-size: 22px; margin-bottom: 4px; letter-spacing: 1px; }
-.subtitle { text-align: center; color: var(--overlay1); font-size: 12px; margin-bottom: 16px; }
-.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; max-width: 1200px; margin: 0 auto; }
-.card { background: var(--mantle); border-radius: 10px; padding: 14px; border-left: 4px solid var(--surface2); }
-.card h2 { font-size: 13px; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 10px; }
-.card.red { border-left-color: var(--red); }
-.card.red h2 { color: var(--red); }
-.card.peach { border-left-color: var(--peach); }
-.card.peach h2 { color: var(--peach); }
-.card.green { border-left-color: var(--green); }
-.card.green h2 { color: var(--green); }
-.card.blue { border-left-color: var(--blue); }
-.card.blue h2 { color: var(--blue); }
-.card.mauve { border-left-color: var(--mauve); }
-.card.mauve h2 { color: var(--mauve); }
-.card.lavender { border-left-color: var(--lavender); }
-.card.lavender h2 { color: var(--lavender); }
-.card.teal { border-left-color: var(--teal); }
-.card.teal h2 { color: var(--teal); }
+body { font-family: 'Segoe UI', Arial, sans-serif; background: var(--base); color: var(--text); padding: 12px; }
+h1 { text-align: center; color: var(--mauve); font-size: 20px; margin-bottom: 4px; }
+.subtitle { text-align: center; color: var(--overlay1); font-size: 11px; margin-bottom: 12px; }
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; max-width: 1200px; margin: 0 auto; }
+.card { background: var(--mantle); border-radius: 10px; padding: 12px; border-left: 4px solid var(--surface2); }
+.card h2 { font-size: 12px; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 8px; }
+.card.red { border-left-color: var(--red); } .card.red h2 { color: var(--red); }
+.card.peach { border-left-color: var(--peach); } .card.peach h2 { color: var(--peach); }
+.card.green { border-left-color: var(--green); } .card.green h2 { color: var(--green); }
+.card.blue { border-left-color: var(--blue); } .card.blue h2 { color: var(--blue); }
+.card.mauve { border-left-color: var(--mauve); } .card.mauve h2 { color: var(--mauve); }
+.card.lavender { border-left-color: var(--lavender); } .card.lavender h2 { color: var(--lavender); }
+.card.teal { border-left-color: var(--teal); } .card.teal h2 { color: var(--teal); }
+.card.yellow { border-left-color: var(--yellow); } .card.yellow h2 { color: var(--yellow); }
 .card.wide { grid-column: 1 / -1; }
 
-.item { display: flex; align-items: flex-start; padding: 5px 0; border-bottom: 1px solid var(--surface0); font-size: 13px; line-height: 1.4; }
+.item { display: flex; align-items: flex-start; padding: 4px 0; border-bottom: 1px solid var(--surface0); font-size: 12px; line-height: 1.4; }
 .item:last-child { border-bottom: none; }
-.badge { display: inline-block; font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 10px; margin-right: 8px; white-space: nowrap; flex-shrink: 0; margin-top: 2px; }
+.badge { display: inline-block; font-size: 9px; font-weight: 700; padding: 2px 6px; border-radius: 10px; margin-right: 6px; white-space: nowrap; flex-shrink: 0; margin-top: 2px; }
 .badge.sent { background: var(--green); color: var(--crust); }
 .badge.active { background: var(--blue); color: var(--crust); }
 .badge.send { background: var(--red); color: var(--crust); }
@@ -52,32 +45,48 @@ h1 { text-align: center; color: var(--mauve); font-size: 22px; margin-bottom: 4p
 .badge.filed { background: var(--teal); color: var(--crust); }
 .badge.declined { background: var(--surface1); color: var(--overlay0); }
 .badge.writing { background: var(--yellow); color: var(--crust); }
+.badge.waiting { background: var(--peach); color: var(--crust); }
 
-.countdown { text-align: center; padding: 10px; background: linear-gradient(135deg, #302030, var(--mantle)); border-radius: 10px; margin-bottom: 12px; max-width: 1200px; margin-left: auto; margin-right: auto; border: 1px solid var(--surface0); }
-.countdown .days { font-size: 36px; font-weight: 800; color: var(--red); }
-.countdown .label { font-size: 12px; color: var(--subtext0); }
+.countdown { text-align: center; padding: 10px; background: linear-gradient(135deg, #302030, var(--mantle)); border-radius: 10px; margin-bottom: 10px; max-width: 1200px; margin-left: auto; margin-right: auto; border: 1px solid var(--surface0); }
+.countdown .days { font-size: 32px; font-weight: 800; color: var(--red); }
+.countdown .label { font-size: 11px; color: var(--subtext0); }
 
-.stat-row { display: flex; gap: 12px; max-width: 1200px; margin: 0 auto 12px; }
-.stat { flex: 1; background: var(--mantle); border-radius: 10px; padding: 12px; text-align: center; border: 1px solid var(--surface0); }
-.stat .num { font-size: 28px; font-weight: 800; }
-.stat .lbl { font-size: 11px; color: var(--overlay1); text-transform: uppercase; letter-spacing: 1px; }
+.stat-row { display: flex; gap: 10px; max-width: 1200px; margin: 0 auto 10px; }
+.stat { flex: 1; background: var(--mantle); border-radius: 10px; padding: 10px; text-align: center; border: 1px solid var(--surface0); }
+.stat .num { font-size: 24px; font-weight: 800; }
+.stat .lbl { font-size: 10px; color: var(--overlay1); text-transform: uppercase; letter-spacing: 1px; }
 .stat.r .num { color: var(--red); }
 .stat.g .num { color: var(--green); }
 .stat.b .num { color: var(--blue); }
 .stat.y .num { color: var(--yellow); }
 .stat.p .num { color: var(--mauve); }
 
-.evidence-chain { background: var(--crust); border-radius: 8px; padding: 10px; margin: 6px 0; }
-.ev-step { display: flex; align-items: center; padding: 4px 0; font-size: 12px; }
-.ev-dot { width: 10px; height: 10px; border-radius: 50%; margin-right: 10px; flex-shrink: 0; }
+.evidence-chain { background: var(--crust); border-radius: 8px; padding: 8px; margin: 4px 0; }
+.ev-step { display: flex; align-items: center; padding: 3px 0; font-size: 11px; }
+.ev-dot { width: 8px; height: 8px; border-radius: 50%; margin-right: 8px; flex-shrink: 0; }
 .ev-dot.doc { background: var(--green); }
 .ev-dot.warn { background: var(--red); }
 .ev-dot.info { background: var(--blue); }
-.ev-date { color: var(--overlay1); width: 80px; flex-shrink: 0; }
+.ev-date { color: var(--overlay1); width: 75px; flex-shrink: 0; font-size: 11px; }
 
-.note { font-size: 11px; color: var(--overlay0); font-style: italic; margin-top: 6px; padding-top: 6px; border-top: 1px solid var(--surface0); }
+.note { font-size: 10px; color: var(--overlay0); font-style: italic; margin-top: 4px; padding-top: 4px; border-top: 1px solid var(--surface0); }
 .highlight { background: var(--surface0); border: 1px solid var(--yellow); border-radius: 6px; padding: 8px; margin: 6px 0; font-size: 12px; }
 .highlight b { color: var(--yellow); }
+
+.contact-row { display: grid; grid-template-columns: 1fr auto auto; gap: 6px; padding: 5px 0; border-bottom: 1px solid var(--surface0); font-size: 11px; align-items: center; }
+.contact-row:last-child { border-bottom: none; }
+.contact-name { font-weight: 600; }
+.contact-info { color: var(--overlay1); font-size: 10px; }
+.contact-date { color: var(--overlay0); font-size: 10px; text-align: right; white-space: nowrap; }
+.contact-next { color: var(--yellow); font-size: 10px; text-align: right; white-space: nowrap; }
+
+.qa { margin: 6px 0; padding: 8px; background: var(--crust); border-radius: 6px; }
+.qa-q { color: var(--peach); font-weight: 600; font-size: 12px; margin-bottom: 2px; }
+.qa-a { color: var(--text); font-size: 12px; line-height: 1.4; }
+
+.deadline-item { display: flex; justify-content: space-between; padding: 4px 0; border-bottom: 1px solid var(--surface0); font-size: 12px; }
+.deadline-item:last-child { border-bottom: none; }
+.deadline-date { color: var(--red); font-weight: 700; white-space: nowrap; }
 
 a { color: var(--sapphire); text-decoration: none; }
 a:hover { text-decoration: underline; }
@@ -85,50 +94,77 @@ a:hover { text-decoration: underline; }
 @media (max-width: 768px) {
   .grid { grid-template-columns: 1fr; }
   .stat-row { flex-direction: column; }
+  .contact-row { grid-template-columns: 1fr; }
 }
 </style>
 </head><body>
 
 <h1>LEDFORD v. FREEDOM MORTGAGE</h1>
-<p class="subtitle">VA Loan #0136811965 &bull; OIG Ref #2026-16691 &bull; Last updated: March 18, 2026</p>
+<p class="subtitle">VA Loan #0136811965 &bull; OIG Ref #2026-16691 &bull; Updated: March 18, 2026</p>
 
 <div class="countdown">
   <div class="days" id="countdown">16</div>
   <div class="label">DAYS UNTIL APRIL 3 CFK DEADLINE &mdash; DO NOT SIGN</div>
 </div>
 
-<div class="stat-row">
-  <div class="stat g"><div class="num">5</div><div class="lbl">Emails Sent<br>Mar 17-18</div></div>
-  <div class="stat r"><div class="num">1</div><div class="lbl">Priority Send<br>Today</div></div>
-  <div class="stat b"><div class="num">5</div><div class="lbl">Active<br>Investigations</div></div>
-  <div class="stat y"><div class="num">~23</div><div class="lbl">Drafts to<br>Delete</div></div>
-  <div class="stat p"><div class="num">10+</div><div class="lbl">Key Violations<br>Documented</div></div>
+<!-- THE 4 KEY POINTS - FOR JERROD -->
+<div class="grid">
+<div class="card yellow wide">
+  <h2>The 4 Key Points &mdash; Quick Reference</h2>
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; font-size: 12px;">
+    <div style="padding: 6px; background: var(--crust); border-radius: 6px;"><b style="color: var(--yellow);">1.</b> Freedom Mortgage promised IN WRITING &mdash; twice &mdash; not to foreclose before evaluating us. They foreclosed anyway. We have the letters.</div>
+    <div style="padding: 6px; background: var(--crust); border-radius: 6px;"><b style="color: var(--yellow);">2.</b> FM never submitted our file to VA's system (VALERI). A VA employee confirmed this on a recorded VA phone line. FM did this to other veterans too.</div>
+    <div style="padding: 6px; background: var(--crust); border-radius: 6px;"><b style="color: var(--yellow);">3.</b> Congress passed a law (H.R. 1815) to prevent exactly this. FM had 176 days to comply and ignored it. They told Congress "foreclosure is the last thing we want" &mdash; then foreclosed on us.</div>
+    <div style="padding: 6px; background: var(--crust); border-radius: 6px;"><b style="color: var(--yellow);">4.</b> VA owns our house now. VA can pause the eviction, sell it back to us, or lease it to us &mdash; without any new law. We are still living here. April 3 deadline.</div>
+  </div>
 </div>
 
-<div class="grid">
+<!-- IF SOMEONE ASKS - JERROD QUICK ANSWERS -->
+<div class="card peach wide">
+  <h2>If Someone Asks &mdash; Quick Answers for Jerrod</h2>
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+    <div class="qa">
+      <div class="qa-q">What happened to your house?</div>
+      <div class="qa-a">Freedom Mortgage foreclosed on it in January. They promised twice in writing not to foreclose before evaluating us, then did it anyway. The VA now owns it. We're still living here fighting to keep it.</div>
+    </div>
+    <div class="qa">
+      <div class="qa-q">Are you guys homeless?</div>
+      <div class="qa-a">Not yet. We're still in the house. No eviction has been filed. But the VA's contractor gave us an April 3 deadline to leave. We're trying to get someone to pause that while investigations happen.</div>
+    </div>
+    <div class="qa">
+      <div class="qa-q">Can they really do that?</div>
+      <div class="qa-a">What they did was illegal under multiple federal laws. We have an active VA Inspector General investigation, the House Veterans' Affairs Committee is engaged, and NPR is writing a story about it. We have FM's own letters as evidence.</div>
+    </div>
+    <div class="qa">
+      <div class="qa-q">What do you need?</div>
+      <div class="qa-a">An attorney &mdash; we can't find one willing to take the case. And someone with authority to tell the VA to pause the eviction while investigations are active. If you know a lawyer who handles mortgage cases, that's the single biggest thing.</div>
+    </div>
+  </div>
+</div>
 
 <!-- NPR STATUS -->
-<div class="card peach">
+<div class="card green">
   <h2>NPR Article Status</h2>
-  <div class="highlight"><b>Chris Arnold is actively writing.</b> He's asking detail questions about specific facts, timelines, and sourcing. This is very good.</div>
-  <div class="item"><span class="badge sent">SENT</span>Main VASP evidence email + 10 attachments (Mar 17 2:16pm)</div>
-  <div class="item"><span class="badge sent">SENT</span>Answered Chris's VASP link + Warren quote questions (Mar 17 4:41pm)</div>
-  <div class="item"><span class="badge sent">SENT</span>Answered trailer timeline question (Mar 18 10:01am)</div>
-  <div class="item"><span class="badge active">SHARED</span>New Key Findings Google Doc</div>
-  <div class="item"><span class="badge active">SHARED</span>Google Drive evidence folder (35 FM docs cataloged)</div>
-  <div class="item"><span class="badge pending">PENDING</span>FOIA coordination &mdash; asked Chris if NPR filed one</div>
-  <div class="note">Chris + Quil gave VA a response deadline of Mar 17. VA/FM still haven't responded to NPR.</div>
+  <div class="highlight"><b>Chris Arnold is actively writing.</b> Asking detail questions = article in progress.</div>
+  <div class="item"><span class="badge sent">SENT</span>VASP evidence + 10 attachments (Mar 17)</div>
+  <div class="item"><span class="badge sent">SENT</span>Answered follow-up questions (Mar 17-18)</div>
+  <div class="item"><span class="badge active">SHARED</span>Google Doc + Drive evidence folder</div>
+  <div class="item"><span class="badge pending">PENDING</span>FOIA coordination with Chris</div>
+  <div class="note">VA/FM have not responded to NPR (deadline was Mar 17).</div>
 </div>
 
-<!-- TODAY'S PRIORITIES -->
+<!-- DEADLINES & FILINGS -->
 <div class="card red">
-  <h2>Today &mdash; March 18</h2>
-  <div class="item"><span class="badge done">DONE</span>Answer Chris's trailer timeline question</div>
-  <div class="item"><span class="badge done">SENT</span><b>Joseph Najmolhoda push-back</b> + updated docs attached</div>
-  <div class="item"><span class="badge send">SEND</span><b>Christie Corrigan follow-up</b> (draft r-7256989651564581416)</div>
-  <div class="item"><span class="badge pending">CHECK</span>Spokane County Court docket &mdash; no UD filed yet</div>
-  <div class="item"><span class="badge pending">DELETE</span>~23 superseded Gmail drafts (manual &mdash; see CLAUDE.md Sec 8)</div>
-  <div class="item"><span class="badge pending">CHECK</span>Bolt claim #BTPIPLXC &mdash; reply from support@boltinc.com?</div>
+  <h2>Deadlines &amp; Upcoming Filings</h2>
+  <div class="deadline-item"><span>VRM Cash for Keys deadline</span><span class="deadline-date">APR 3</span></div>
+  <div class="deadline-item"><span>Regulations.gov VALERI comment</span><span class="deadline-date">APR 20</span></div>
+  <div class="deadline-item"><span>Regulations.gov Form 26-0971 comment</span><span class="deadline-date">OPEN</span></div>
+  <div class="deadline-item"><span>CFPB Complaint (ready to file)</span><span style="color: var(--yellow); font-weight: 700;">ASAP</span></div>
+  <div class="deadline-item"><span>WA AG Consumer Protection</span><span style="color: var(--yellow); font-weight: 700;">ASAP</span></div>
+  <div class="deadline-item"><span>FOIA x2 (VALERI + calls)</span><span style="color: var(--yellow); font-weight: 700;">THIS WEEK</span></div>
+  <div class="deadline-item"><span>House VAC Whistleblower Portal</span><span style="color: var(--yellow); font-weight: 700;">THIS WEEK</span></div>
+  <div class="deadline-item"><span>Senate VAC</span><span style="color: var(--peach); font-weight: 700;">NEXT WEEK</span></div>
+  <div class="deadline-item"><span>Sen. Cantwell casework</span><span style="color: var(--peach); font-weight: 700;">NEXT WEEK</span></div>
 </div>
 
 <!-- VASP EVIDENCE CHAIN -->
@@ -136,138 +172,203 @@ a:hover { text-decoration: underline; }
   <h2>VASP Evidence Chain &mdash; The Core Story</h2>
   <div class="evidence-chain">
     <div class="ev-step"><div class="ev-dot doc"></div><div class="ev-date">Nov 12 '24</div>FM emails Ledfords about VASP by name &mdash; FM initiated it</div>
-    <div class="ev-step"><div class="ev-dot doc"></div><div class="ev-date">Jan 15 '25</div>FM acknowledges complete application, promises VASP evaluation, writes <b>"we cannot conduct a foreclosure sale before we evaluate"</b></div>
-    <div class="ev-step"><div class="ev-dot warn"></div><div class="ev-date">Feb 3 '25</div>FM marks everything "Not Reviewed" &mdash; 19 days after promise. Approves forbearance only.</div>
-    <div class="ev-step"><div class="ev-dot info"></div><div class="ev-date">Jan-Apr '25</div>Warren: "Still processing. Don't worry." Ledfords told to wait. No action required.</div>
-    <div class="ev-step"><div class="ev-dot warn"></div><div class="ev-date">Apr 29 '25</div>Warren emails confirm FM has NOT submitted file. VASP closing tomorrow.</div>
-    <div class="ev-step"><div class="ev-dot warn"></div><div class="ev-date">Apr 30 '25</div>FM requires NEW application + cancels forbearance, same day. Writes <b>"we cannot foreclose before we evaluate"</b> AGAIN. VASP scrubbed from template.</div>
-    <div class="ev-step"><div class="ev-dot warn"></div><div class="ev-date">May 1 '25</div>VASP canceled (8 days' notice). Ledfords never evaluated.</div>
-    <div class="ev-step"><div class="ev-dot warn"></div><div class="ev-date">Jun 4 '25</div>FM offers 7.25% mod ($2,571/mo on $4,200 income) &mdash; 77% increase</div>
-    <div class="ev-step"><div class="ev-dot warn"></div><div class="ev-date">Jul 8 '25</div>Jerrod calls FM "predatory" &mdash; Warren forwards to FM as report</div>
-    <div class="ev-step"><div class="ev-dot warn"></div><div class="ev-date">Jul 22 '25</div><b>FM files foreclosure &mdash; 14 days after complaint forwarded</b></div>
-    <div class="ev-step"><div class="ev-dot info"></div><div class="ev-date">Jul 25 '25</div>Warren on recorded VA line confirms VALERI non-submission + FM pattern with other vets</div>
-    <div class="ev-step"><div class="ev-dot doc"></div><div class="ev-date">Jul 28 '25</div>Ledfords file VA Report + NOE/RFI. Warren confirms receipt Jul 29: "forwarding to lender now"</div>
-    <div class="ev-step"><div class="ev-dot info"></div><div class="ev-date">Jul 30 '25</div>H.R. 1815 signed &mdash; 8 days after FM's foreclosure referral</div>
-    <div class="ev-step"><div class="ev-dot warn"></div><div class="ev-date">Jan 23 '26</div><b>FM completes trustee sale &mdash; 176 days after H.R. 1815, 179 days ignoring NOE/RFI</b></div>
+    <div class="ev-step"><div class="ev-dot doc"></div><div class="ev-date">Jan 15 '25</div>FM acknowledges complete application, promises VASP eval, writes <b>"we cannot foreclose before we evaluate"</b></div>
+    <div class="ev-step"><div class="ev-dot warn"></div><div class="ev-date">Feb 3 '25</div>FM marks everything "Not Reviewed" &mdash; 19 days after promise</div>
+    <div class="ev-step"><div class="ev-dot info"></div><div class="ev-date">Jan-Apr '25</div>Warren: "Still processing. Don't worry." Ledfords told to wait.</div>
+    <div class="ev-step"><div class="ev-dot warn"></div><div class="ev-date">Apr 29 '25</div>Warren emails: FM has NOT submitted. VASP closing tomorrow.</div>
+    <div class="ev-step"><div class="ev-dot warn"></div><div class="ev-date">Apr 30 '25</div>FM requires NEW app + cancels forbearance. Writes "cannot foreclose" AGAIN.</div>
+    <div class="ev-step"><div class="ev-dot warn"></div><div class="ev-date">May 1 '25</div>VASP canceled (8 days' notice). Never evaluated.</div>
+    <div class="ev-step"><div class="ev-dot warn"></div><div class="ev-date">Jun 4 '25</div>FM offers 7.25% mod ($2,571/mo on $4,200 income)</div>
+    <div class="ev-step"><div class="ev-dot warn"></div><div class="ev-date">Jul 8 '25</div>Jerrod calls FM "predatory" &mdash; Warren forwards to FM</div>
+    <div class="ev-step"><div class="ev-dot warn"></div><div class="ev-date">Jul 22 '25</div><b>FM files foreclosure &mdash; 14 days after complaint</b></div>
+    <div class="ev-step"><div class="ev-dot info"></div><div class="ev-date">Jul 25 '25</div>Warren on recorded VA line: FM never submitted + FM pattern with other vets</div>
+    <div class="ev-step"><div class="ev-dot doc"></div><div class="ev-date">Jul 28 '25</div>VA Report + NOE/RFI filed. Warren receipt Jul 29.</div>
+    <div class="ev-step"><div class="ev-dot info"></div><div class="ev-date">Jul 30 '25</div>H.R. 1815 signed &mdash; 8 days after FM's referral</div>
+    <div class="ev-step"><div class="ev-dot warn"></div><div class="ev-date">Jan 23 '26</div><b>Trustee sale &mdash; 176 days after H.R. 1815, 179 days ignoring NOE/RFI</b></div>
+  </div>
+</div>
+
+<!-- CONGRESSIONAL CONTACTS -->
+<div class="card lavender">
+  <h2>Congressional Contacts</h2>
+  <div class="contact-row">
+    <div><span class="contact-name">Joseph Najmolhoda</span> <span class="badge sent">SENT</span><br><span class="contact-info">Murray VSO | joseph_najmolhoda@murray.senate.gov | 206-305-7008</span></div>
+    <div class="contact-date">Sent: Mar 18</div>
+    <div class="contact-next">Follow up: Mar 25</div>
+  </div>
+  <div class="contact-row">
+    <div><span class="contact-name">Halle Sarkisian</span> <span class="badge active">ACTIVE</span><br><span class="contact-info">House VAC Staff Dir | Halle.Sarkisian@mail.house.gov | 202-578-1179</span></div>
+    <div class="contact-date">Sent: Mar 13</div>
+    <div class="contact-next">Follow up: Mar 25</div>
+  </div>
+  <div class="contact-row">
+    <div><span class="contact-name">Jane Scarborough / Isabela Schandlbauer</span> <span class="badge active">CC'D</span><br><span class="contact-info">Baumgartner (WA-5) | Jane.Scarborough@mail.house.gov</span></div>
+    <div class="contact-date">CC'd: Mar 5</div>
+    <div class="contact-next">Keep CC'd</div>
+  </div>
+  <div class="contact-row">
+    <div><span class="contact-name">Sen. Cantwell</span> <span class="badge pending">NOT FILED</span><br><span class="contact-info">(509) 353-2507</span></div>
+    <div class="contact-date">&mdash;</div>
+    <div class="contact-next">File: Mar 25</div>
+  </div>
+  <div class="contact-row">
+    <div><span class="contact-name">Senate VAC</span> <span class="badge pending">NOT FILED</span><br><span class="contact-info">veterans.senate.gov</span></div>
+    <div class="contact-date">&mdash;</div>
+    <div class="contact-next">File: Mar 25</div>
+  </div>
+</div>
+
+<!-- LEGAL CONTACTS -->
+<div class="card blue">
+  <h2>Legal Contacts</h2>
+  <div class="contact-row">
+    <div><span class="contact-name">NJP (Missy Jordan)</span> <span class="badge declined">DECLINED</span><br><span class="contact-info">missyj@nwjustice.org | 206-707-0924</span></div>
+    <div class="contact-date">Declined: Mar 11</div>
+    <div class="contact-next">&mdash;</div>
+  </div>
+  <div class="contact-row">
+    <div><span class="contact-name">NJP Eviction Defense</span> <span class="badge pending">CALL</span><br><span class="contact-info">855-657-8387 (separate from foreclosure)</span></div>
+    <div class="contact-date">&mdash;</div>
+    <div class="contact-next">Call: Mar 24</div>
+  </div>
+  <div class="contact-row">
+    <div><span class="contact-name">WSBA Foreclosure Attorneys</span> <span class="badge pending">CALL</span><br><span class="contact-info">Phillabaum 509-993-8192 | McCormick 509-455-6000</span></div>
+    <div class="contact-date">&mdash;</div>
+    <div class="contact-next">Call: Mar 24</div>
+  </div>
+  <div class="contact-row">
+    <div><span class="contact-name">NCLC (Sharpe / Cohen)</span> <span class="badge pending">CONTACT</span><br><span class="contact-info">nclc.org | National VA loan experts</span></div>
+    <div class="contact-date">&mdash;</div>
+    <div class="contact-next">Email: Mar 24</div>
+  </div>
+  <div class="contact-row">
+    <div><span class="contact-name">Carl Maxey Center</span> <span class="badge pending">CONTACT</span><br><span class="contact-info">selfhelp@carlmaxeycenter.org | Mon-Thu 10am-2pm</span></div>
+    <div class="contact-date">&mdash;</div>
+    <div class="contact-next">Email: Mar 26</div>
+  </div>
+  <div class="contact-row">
+    <div><span class="contact-name">Melissa Huelsman</span> <span class="badge declined">DECLINED</span><br><span class="contact-info">NPR-referred, couldn't take WA case</span></div>
+    <div class="contact-date">Declined: Mar 2</div>
+    <div class="contact-next">&mdash;</div>
+  </div>
+</div>
+
+<!-- VSO / SUPPORT CONTACTS -->
+<div class="card teal">
+  <h2>VSO &amp; Support Contacts</h2>
+  <div class="contact-row">
+    <div><span class="contact-name">Christie Corrigan</span> <span class="badge waiting">NO REPLY</span><br><span class="contact-info">Semper Fi Fund | christie.corrigan@thefund.org | (760) 805-7880</span></div>
+    <div class="contact-date">Sent: Mar 13<br>Follow-up: Mar 18</div>
+    <div class="contact-next">Follow up: Mar 25</div>
+  </div>
+  <div class="contact-row">
+    <div><span class="contact-name">Kristin Walsh</span> <span class="badge pending">DRAFT</span><br><span class="contact-info">WWP Gov Affairs | klahawalsh@woundedwarriorproject.org</span></div>
+    <div class="contact-date">&mdash;</div>
+    <div class="contact-next">Send: Mar 27</div>
+  </div>
+  <div class="contact-row">
+    <div><span class="contact-name">Marjorie Pennington</span> <span class="badge pending">DRAFT</span><br><span class="contact-info">EDF | Find email at edf.org</span></div>
+    <div class="contact-date">&mdash;</div>
+    <div class="contact-next">Send: Mar 27</div>
+  </div>
+  <div class="contact-row">
+    <div><span class="contact-name">Ben Stuckart</span> <span class="badge pending">DRAFT</span><br><span class="contact-info">SLIHC ED | slihc.org or FB DM (172 mutuals)</span></div>
+    <div class="contact-date">&mdash;</div>
+    <div class="contact-next">Send: Mar 26</div>
+  </div>
+  <div class="contact-row">
+    <div><span class="contact-name">WDVA Director Puente</span> <span class="badge pending">DRAFT</span><br><span class="contact-info">benefits@dva.wa.gov | 1-800-562-2308</span></div>
+    <div class="contact-date">&mdash;</div>
+    <div class="contact-next">Send: Mar 26</div>
+  </div>
+  <div class="contact-row">
+    <div><span class="contact-name">Daniel Walters</span> <span class="badge hold">AFTER NPR</span><br><span class="contact-info">Inlander | FB friend #350, 127 mutuals</span></div>
+    <div class="contact-date">&mdash;</div>
+    <div class="contact-next">After NPR publishes</div>
+  </div>
+  <div class="contact-row">
+    <div><span class="contact-name">Jessa Lewis</span> <span class="badge pending">TEXT</span><br><span class="contact-info">FB friend #15, 251 mutuals | Campaign Dir connection</span></div>
+    <div class="contact-date">&mdash;</div>
+    <div class="contact-next">Text: This weekend</div>
+  </div>
+</div>
+
+<!-- VA LOAN TECHNICIANS -->
+<div class="card mauve">
+  <h2>VA Loan Technicians (Atlanta RLC)</h2>
+  <div class="contact-row">
+    <div><span class="contact-name">Warren Johnson</span> <span class="badge active">KEY</span><br><span class="contact-info">Loan Specialist | warren.johnson@va.gov | Ext. 221036</span></div>
+    <div class="contact-date">Ongoing</div>
+    <div class="contact-next">FOIA his calls</div>
+  </div>
+  <div class="contact-row">
+    <div><span class="contact-name">James Hodges</span> <span class="badge stale">UNRESPONSIVE</span><br><span class="contact-info">Supervisor | james.hodges1@va.gov | Ext. 221033</span></div>
+    <div class="contact-date">Last: Mar 18</div>
+    <div class="contact-next">Never read reports</div>
+  </div>
+  <div class="contact-row">
+    <div><span class="contact-name">Joy Iyekekpolor</span> <span class="badge pending">NOT CONTACTED</span><br><span class="contact-info">Director | JOY.IYEKEKPOLOR@va.gov</span></div>
+    <div class="contact-date">&mdash;</div>
+    <div class="contact-next">Escalation point</div>
+  </div>
+  <div class="contact-row">
+    <div><span class="contact-name">NPR: Chris Arnold</span> <span class="badge writing">WRITING</span><br><span class="contact-info">CArnold@npr.org</span></div>
+    <div class="contact-date">Last: Mar 18</div>
+    <div class="contact-next">Wait for questions</div>
+  </div>
+  <div class="contact-row">
+    <div><span class="contact-name">NPR: Quil Lawrence</span> <span class="badge active">CC'D</span><br><span class="contact-info">DLawrence@npr.org</span></div>
+    <div class="contact-date">CC'd: Mar 17</div>
+    <div class="contact-next">Respecting Jerrod's boundaries</div>
   </div>
 </div>
 
 <!-- KEY VIOLATIONS -->
 <div class="card mauve">
   <h2>Key Violations (Documented)</h2>
-  <div class="item"><span class="badge new">NEW</span><b>FM's own no-foreclosure promise x2</b> &mdash; Jan 15 + Apr 30 letters</div>
+  <div class="item"><span class="badge new">NEW</span><b>FM's no-foreclosure promise x2</b> &mdash; Jan 15 + Apr 30 letters</div>
   <div class="item"><span class="badge new">NEW</span><b>Warren NOE/RFI receipt</b> &mdash; FM ignored 179 days</div>
   <div class="item"><span class="badge new">NEW</span><b>Potential retaliation</b> &mdash; complaint &rarr; foreclosure in 14 days</div>
   <div class="item"><span class="badge new">NEW</span><b>Fee stacking</b> &mdash; $2,696 in fees, zero payments in FM records</div>
   <div class="item"><span class="badge active">CORE</span>VASP non-submission &mdash; held 3.5 months, never evaluated</div>
-  <div class="item"><span class="badge active">CORE</span>VALERI non-submission &mdash; confirmed by VA on recorded line</div>
-  <div class="item"><span class="badge active">CORE</span>RESPA dual-tracking &mdash; foreclosure during active loss mitigation</div>
-  <div class="item"><span class="badge active">CORE</span>H.R. 1815 non-evaluation &mdash; 176 days, no compliance</div>
-  <div class="item"><span class="badge active">CORE</span>RESPA NOE/RFI non-response</div>
+  <div class="item"><span class="badge active">CORE</span>VALERI non-submission &mdash; confirmed on recorded VA line</div>
+  <div class="item"><span class="badge active">CORE</span>RESPA dual-tracking</div>
+  <div class="item"><span class="badge active">CORE</span>H.R. 1815 non-evaluation &mdash; 176 days</div>
   <div class="item"><span class="badge active">CORE</span>FCRA/CARES credit reporting violations</div>
-  <div class="item"><span class="badge pending">VERIFY</span>IRRRL bait-and-switch refinancing &mdash; need Closing Disclosure</div>
-</div>
-
-<!-- ACTIVE INVESTIGATIONS -->
-<div class="card blue">
-  <h2>Active Investigations &amp; Inquiries</h2>
-  <div class="item"><span class="badge active">ACTIVE</span>VA OIG (Ref #2026-16691) &mdash; filed Feb 20</div>
-  <div class="item"><span class="badge active">ACTIVE</span>Sen. Murray casework &mdash; push-back sent Mar 18</div>
-  <div class="item"><span class="badge active">ACTIVE</span>House VAC / Halle Sarkisian &mdash; engaging VA directly</div>
-  <div class="item"><span class="badge writing">WRITING</span><b>NPR / Chris Arnold + Quil Lawrence</b></div>
-  <div class="item"><span class="badge filed">FILED</span>VA Public Comment M26-4 (FINAL v5, Mar 11)</div>
-  <div class="item"><span class="badge pending">PENDING</span>House VAC Whistleblower Portal &mdash; not yet submitted</div>
-</div>
-
-<!-- CONTACTS STATUS -->
-<div class="card lavender wide">
-  <h2>Contact Status &mdash; Who's Where</h2>
-  <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px;">
-    <div>
-      <div style="color: var(--lavender); font-size: 11px; font-weight: 700; margin-bottom: 6px;">CONGRESSIONAL</div>
-      <div class="item"><span class="badge active">ACTIVE</span>Murray / Najmolhoda</div>
-      <div class="item"><span class="badge active">ACTIVE</span>House VAC / Halle</div>
-      <div class="item"><span class="badge active">CC'D</span>Baumgartner staff</div>
-      <div class="item"><span class="badge pending">NOT FILED</span>Sen. Cantwell</div>
-      <div class="item"><span class="badge pending">NOT FILED</span>Senate VAC</div>
-    </div>
-    <div>
-      <div style="color: var(--lavender); font-size: 11px; font-weight: 700; margin-bottom: 6px;">LEGAL</div>
-      <div class="item"><span class="badge declined">DECLINED</span>NJP (foreclosure)</div>
-      <div class="item"><span class="badge declined">DECLINED</span>Huelsman</div>
-      <div class="item"><span class="badge pending">CALL</span>WSBA attorneys</div>
-      <div class="item"><span class="badge pending">CONTACT</span>NCLC (Sharpe/Cohen)</div>
-      <div class="item"><span class="badge pending">CONTACT</span>Carl Maxey Center</div>
-      <div class="item"><span class="badge pending">CALL</span>NJP Eviction Defense</div>
-    </div>
-    <div>
-      <div style="color: var(--lavender); font-size: 11px; font-weight: 700; margin-bottom: 6px;">OUTREACH / SUPPORT</div>
-      <div class="item"><span class="badge sent">SENT</span>Christie Corrigan (no reply)</div>
-      <div class="item"><span class="badge pending">DRAFT</span>Walsh, Pennington, Bahme</div>
-      <div class="item"><span class="badge pending">DRAFT</span>Dr. Perry, Dr. Charboneau</div>
-      <div class="item"><span class="badge pending">DRAFT</span>Ben Stuckart (SLIHC)</div>
-      <div class="item"><span class="badge hold">HOLD</span>Daniel Walters (after NPR)</div>
-      <div class="item"><span class="badge pending">TEXT</span>Jessa Lewis</div>
-    </div>
-  </div>
+  <div class="item"><span class="badge pending">VERIFY</span>IRRRL bait-and-switch &mdash; need Closing Disclosure</div>
 </div>
 
 <!-- DOCUMENTS STATUS -->
 <div class="card teal">
-  <h2>Key Documents &mdash; Current vs. Stale</h2>
-  <div class="item"><span class="badge done">UPDATED</span><b>Advocacy Brief</b> (Mar 18) &mdash; FM promise, retaliation, urgency framing</div>
-  <div class="item"><span class="badge done">UPDATED</span><b>Legal Timeline v4</b> (Mar 18) &mdash; 12 new evidence entries added</div>
-  <div class="item"><span class="badge done">UPDATED</span><b>CFPB Complaint</b> (Mar 18) &mdash; 7 new sections added</div>
-  <div class="item"><span class="badge done">CURRENT</span>CLAUDE.md (updated today, Session 11)</div>
-  <div class="item"><span class="badge done">CURRENT</span>Public Comment FINAL v5 (submitted Mar 11)</div>
+  <h2>Key Documents</h2>
+  <div class="item"><span class="badge done">UPDATED</span><b>Advocacy Brief</b> (Mar 18)</div>
+  <div class="item"><span class="badge done">UPDATED</span><b>Legal Timeline v4</b> (Mar 18)</div>
+  <div class="item"><span class="badge done">UPDATED</span><b>CFPB Complaint</b> (Mar 18) &mdash; ready to file</div>
+  <div class="item"><span class="badge done">CURRENT</span>CLAUDE.md (Mar 18)</div>
+  <div class="item"><span class="badge done">CURRENT</span>Public Comment FINAL v5</div>
   <div class="item"><span class="badge done">CURRENT</span>FM Portal Catalog (Mar 16)</div>
-  <div class="item"><span class="badge done">CURRENT</span>Warren Transcript Analysis (Mar 16)</div>
-  <div class="item"><span class="badge stale">UPDATE</span><b>Contact Tracker</b> (was "Heroes Tracker") &mdash; statuses outdated</div>
-</div>
-
-<!-- FILINGS NOT YET DONE -->
-<div class="card red">
-  <h2>Filings &mdash; Not Yet Submitted</h2>
-  <div class="item"><span class="badge send">FILE</span><b>CFPB Complaint</b> &mdash; UPDATED &amp; READY &mdash; consumerfinance.gov/complaint</div>
-  <div class="item"><span class="badge send">FILE</span><b>WA AG Consumer Protection</b></div>
-  <div class="item"><span class="badge send">FILE</span><b>FOIA x2</b> &mdash; VALERI (full lifecycle) + all recorded calls</div>
-  <div class="item"><span class="badge send">FILE</span><b>House VAC Whistleblower Portal</b></div>
-  <div class="item"><span class="badge send">FILE</span><b>House VAC Case Report Portal</b></div>
-  <div class="item"><span class="badge send">FILE</span><b>Senate VAC</b></div>
-  <div class="item"><span class="badge send">FILE</span><b>Sen. Cantwell casework</b></div>
-  <div class="item"><span class="badge pending">FOLLOW UP</span>WA AG OMVLA (NJP declined)</div>
-  <div class="item"><span class="badge pending">COMMENT</span>VA-2026-VACO-0001-0041 (VALERI, due Apr 20)</div>
-  <div class="item"><span class="badge pending">COMMENT</span>VA-2026-VACO-0001-0071 (Form 26-0971)</div>
+  <div class="item"><span class="badge done">CURRENT</span>Warren Transcript (Mar 16)</div>
+  <div class="item"><span class="badge stale">UPDATE</span>Contact Tracker &mdash; statuses outdated</div>
 </div>
 
 <!-- EVIDENCE STILL NEEDED -->
 <div class="card blue">
   <h2>Evidence Still Needed</h2>
   <div class="item"><span class="badge pending">LOCATE</span>Jan-Apr 2025 Warren emails (leann.r.ledford@gmail.com)</div>
-  <div class="item"><span class="badge pending">TRANSCRIBE</span>Warren 7/25/25 remaining ~30 min ($8 TurboScribe or FOIA)</div>
-  <div class="item"><span class="badge pending">TRANSCRIBE</span>July 14, 2025 recordings (4 files, 8 days before foreclosure)</div>
+  <div class="item"><span class="badge pending">TRANSCRIBE</span>Warren 7/25/25 remaining ~30 min</div>
+  <div class="item"><span class="badge pending">TRANSCRIBE</span>July 14, 2025 recordings (4 files)</div>
   <div class="item"><span class="badge pending">LOCATE</span>Oct 2023 HAF denial email</div>
   <div class="item"><span class="badge pending">VERIFY</span>IRRRL Closing Disclosure on Ryzen PC</div>
-  <div class="item"><span class="badge pending">AUDIT</span>Galaxy Book Downloads/Documents/Desktop</div>
   <div class="item"><span class="badge pending">REBUILD</span>Exhibit Index B-42 through B-51</div>
 </div>
 
 <!-- FAMILY HEALTH -->
 <div class="card wide" style="border-left-color: var(--maroon); background: linear-gradient(135deg, #1e1525, var(--mantle));">
   <h2 style="color: var(--maroon);">Family &amp; Health</h2>
-  <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-size: 12px;">
-    <div>
-      <b style="color: var(--red);">Jerrod</b><br>
-      Seizures worsening, meds doubled. Cardiac ruled out &rarr; neurological/TBI. More imaging next week. Foreclosure destabilizing disability. Stepped back from NPR interviews.
-    </div>
-    <div>
-      <b style="color: var(--peach);">Home</b><br>
-      Furnace broken (CO exposure). $6,800 replacement. Using space heaters in below-freezing temps. Temperature regulation medically critical. Semper Fi originally paid for install (done wrong).
-    </div>
-    <div>
-      <b style="color: var(--yellow);">Leann</b><br>
-      Cold chills/exhausted Mar 17. Chronic neck pain, brain fog, neurodivergent. MSW student (failed Fall '25 quarter due to crisis). Primary caregiver for Jerrod + grandmother (dementia) + son (IEP).
-    </div>
+  <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; font-size: 12px;">
+    <div><b style="color: var(--red);">Jerrod</b><br>Seizures worsening, meds doubled. Cardiac ruled out &rarr; neurological/TBI. More imaging next week. Stepped back from NPR interviews.</div>
+    <div><b style="color: var(--peach);">Home</b><br>Furnace broken (CO exposure). $6,800 replacement. Space heaters only. Temperature regulation medically critical.</div>
+    <div><b style="color: var(--yellow);">Leann</b><br>Chronic neck pain, brain fog, neurodivergent. MSW student. Primary caregiver for Jerrod + grandmother (dementia) + son (IEP).</div>
   </div>
 </div>
 
