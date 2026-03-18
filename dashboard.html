@@ -4,70 +4,82 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ledford Case Dashboard</title>
 <style>
+/* Catppuccin Mocha palette */
+:root {
+  --base: #1e1e2e; --mantle: #181825; --crust: #11111b;
+  --surface0: #313244; --surface1: #45475a; --surface2: #585b70;
+  --overlay0: #6c7086; --overlay1: #7f849c; --overlay2: #9399b2;
+  --subtext0: #a6adc8; --subtext1: #bac2de; --text: #cdd6f4;
+  --red: #f38ba8; --maroon: #eba0ac; --peach: #fab387; --yellow: #f9e2af;
+  --green: #a6e3a1; --teal: #94e2d5; --sky: #89dceb; --sapphire: #74c7ec;
+  --blue: #89b4fa; --lavender: #b4befe; --mauve: #cba6f7;
+  --flamingo: #f2cdcd; --rosewater: #f5e0dc;
+}
 * { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: 'Segoe UI', Arial, sans-serif; background: #0f1419; color: #e8e8e8; padding: 16px; }
-h1 { text-align: center; color: #C8963E; font-size: 22px; margin-bottom: 4px; letter-spacing: 1px; }
-.subtitle { text-align: center; color: #888; font-size: 12px; margin-bottom: 16px; }
+body { font-family: 'Segoe UI', Arial, sans-serif; background: var(--base); color: var(--text); padding: 16px; }
+h1 { text-align: center; color: var(--mauve); font-size: 22px; margin-bottom: 4px; letter-spacing: 1px; }
+.subtitle { text-align: center; color: var(--overlay1); font-size: 12px; margin-bottom: 16px; }
 .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; max-width: 1200px; margin: 0 auto; }
-.card { background: #1a2030; border-radius: 10px; padding: 14px; border-left: 4px solid #555; }
+.card { background: var(--mantle); border-radius: 10px; padding: 14px; border-left: 4px solid var(--surface2); }
 .card h2 { font-size: 13px; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 10px; }
-.card.red { border-left-color: #e74c3c; }
-.card.red h2 { color: #e74c3c; }
-.card.gold { border-left-color: #C8963E; }
-.card.gold h2 { color: #C8963E; }
-.card.green { border-left-color: #27ae60; }
-.card.green h2 { color: #27ae60; }
-.card.blue { border-left-color: #3498db; }
-.card.blue h2 { color: #3498db; }
-.card.purple { border-left-color: #9b59b6; }
-.card.purple h2 { color: #9b59b6; }
-.card.navy { border-left-color: #1F3864; }
-.card.navy h2 { color: #7fa3d4; }
+.card.red { border-left-color: var(--red); }
+.card.red h2 { color: var(--red); }
+.card.peach { border-left-color: var(--peach); }
+.card.peach h2 { color: var(--peach); }
+.card.green { border-left-color: var(--green); }
+.card.green h2 { color: var(--green); }
+.card.blue { border-left-color: var(--blue); }
+.card.blue h2 { color: var(--blue); }
+.card.mauve { border-left-color: var(--mauve); }
+.card.mauve h2 { color: var(--mauve); }
+.card.lavender { border-left-color: var(--lavender); }
+.card.lavender h2 { color: var(--lavender); }
+.card.teal { border-left-color: var(--teal); }
+.card.teal h2 { color: var(--teal); }
 .card.wide { grid-column: 1 / -1; }
 
-.item { display: flex; align-items: flex-start; padding: 5px 0; border-bottom: 1px solid #252f3f; font-size: 13px; line-height: 1.4; }
+.item { display: flex; align-items: flex-start; padding: 5px 0; border-bottom: 1px solid var(--surface0); font-size: 13px; line-height: 1.4; }
 .item:last-child { border-bottom: none; }
 .badge { display: inline-block; font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 10px; margin-right: 8px; white-space: nowrap; flex-shrink: 0; margin-top: 2px; }
-.badge.sent { background: #27ae60; color: #fff; }
-.badge.active { background: #3498db; color: #fff; }
-.badge.send { background: #e74c3c; color: #fff; }
-.badge.hold { background: #7f8c8d; color: #fff; }
-.badge.pending { background: #f39c12; color: #000; }
-.badge.done { background: #27ae60; color: #fff; }
-.badge.stale { background: #e67e22; color: #fff; }
-.badge.new { background: #9b59b6; color: #fff; }
-.badge.filed { background: #1abc9c; color: #fff; }
-.badge.declined { background: #555; color: #aaa; }
-.badge.writing { background: #C8963E; color: #000; }
+.badge.sent { background: var(--green); color: var(--crust); }
+.badge.active { background: var(--blue); color: var(--crust); }
+.badge.send { background: var(--red); color: var(--crust); }
+.badge.hold { background: var(--surface2); color: var(--subtext0); }
+.badge.pending { background: var(--yellow); color: var(--crust); }
+.badge.done { background: var(--green); color: var(--crust); }
+.badge.stale { background: var(--peach); color: var(--crust); }
+.badge.new { background: var(--mauve); color: var(--crust); }
+.badge.filed { background: var(--teal); color: var(--crust); }
+.badge.declined { background: var(--surface1); color: var(--overlay0); }
+.badge.writing { background: var(--yellow); color: var(--crust); }
 
-.countdown { text-align: center; padding: 10px; background: linear-gradient(135deg, #4a1a1a, #1a2030); border-radius: 10px; margin-bottom: 12px; max-width: 1200px; margin-left: auto; margin-right: auto; }
-.countdown .days { font-size: 36px; font-weight: 800; color: #e74c3c; }
-.countdown .label { font-size: 12px; color: #888; }
+.countdown { text-align: center; padding: 10px; background: linear-gradient(135deg, #302030, var(--mantle)); border-radius: 10px; margin-bottom: 12px; max-width: 1200px; margin-left: auto; margin-right: auto; border: 1px solid var(--surface0); }
+.countdown .days { font-size: 36px; font-weight: 800; color: var(--red); }
+.countdown .label { font-size: 12px; color: var(--subtext0); }
 
 .stat-row { display: flex; gap: 12px; max-width: 1200px; margin: 0 auto 12px; }
-.stat { flex: 1; background: #1a2030; border-radius: 10px; padding: 12px; text-align: center; }
+.stat { flex: 1; background: var(--mantle); border-radius: 10px; padding: 12px; text-align: center; border: 1px solid var(--surface0); }
 .stat .num { font-size: 28px; font-weight: 800; }
-.stat .lbl { font-size: 11px; color: #888; text-transform: uppercase; letter-spacing: 1px; }
-.stat.r .num { color: #e74c3c; }
-.stat.g .num { color: #27ae60; }
-.stat.b .num { color: #3498db; }
-.stat.y .num { color: #C8963E; }
-.stat.p .num { color: #9b59b6; }
+.stat .lbl { font-size: 11px; color: var(--overlay1); text-transform: uppercase; letter-spacing: 1px; }
+.stat.r .num { color: var(--red); }
+.stat.g .num { color: var(--green); }
+.stat.b .num { color: var(--blue); }
+.stat.y .num { color: var(--yellow); }
+.stat.p .num { color: var(--mauve); }
 
-.evidence-chain { background: #141c28; border-radius: 8px; padding: 10px; margin: 6px 0; }
+.evidence-chain { background: var(--crust); border-radius: 8px; padding: 10px; margin: 6px 0; }
 .ev-step { display: flex; align-items: center; padding: 4px 0; font-size: 12px; }
 .ev-dot { width: 10px; height: 10px; border-radius: 50%; margin-right: 10px; flex-shrink: 0; }
-.ev-dot.doc { background: #27ae60; }
-.ev-dot.warn { background: #e74c3c; }
-.ev-dot.info { background: #3498db; }
-.ev-line { width: 2px; height: 12px; background: #333; margin-left: 4px; }
-.ev-date { color: #888; width: 80px; flex-shrink: 0; }
+.ev-dot.doc { background: var(--green); }
+.ev-dot.warn { background: var(--red); }
+.ev-dot.info { background: var(--blue); }
+.ev-date { color: var(--overlay1); width: 80px; flex-shrink: 0; }
 
-.note { font-size: 11px; color: #777; font-style: italic; margin-top: 6px; padding-top: 6px; border-top: 1px solid #252f3f; }
-.highlight { background: #2a1a00; border: 1px solid #C8963E; border-radius: 6px; padding: 8px; margin: 6px 0; font-size: 12px; }
-.highlight b { color: #C8963E; }
+.note { font-size: 11px; color: var(--overlay0); font-style: italic; margin-top: 6px; padding-top: 6px; border-top: 1px solid var(--surface0); }
+.highlight { background: var(--surface0); border: 1px solid var(--yellow); border-radius: 6px; padding: 8px; margin: 6px 0; font-size: 12px; }
+.highlight b { color: var(--yellow); }
 
-a { color: #3498db; text-decoration: none; }
+a { color: var(--sapphire); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
 @media (max-width: 768px) {
@@ -86,8 +98,8 @@ a:hover { text-decoration: underline; }
 </div>
 
 <div class="stat-row">
-  <div class="stat g"><div class="num">4</div><div class="lbl">Emails Sent<br>Mar 17-18</div></div>
-  <div class="stat r"><div class="num">2</div><div class="lbl">Priority Sends<br>Today</div></div>
+  <div class="stat g"><div class="num">5</div><div class="lbl">Emails Sent<br>Mar 17-18</div></div>
+  <div class="stat r"><div class="num">1</div><div class="lbl">Priority Send<br>Today</div></div>
   <div class="stat b"><div class="num">5</div><div class="lbl">Active<br>Investigations</div></div>
   <div class="stat y"><div class="num">~23</div><div class="lbl">Drafts to<br>Delete</div></div>
   <div class="stat p"><div class="num">10+</div><div class="lbl">Key Violations<br>Documented</div></div>
@@ -96,7 +108,7 @@ a:hover { text-decoration: underline; }
 <div class="grid">
 
 <!-- NPR STATUS -->
-<div class="card gold">
+<div class="card peach">
   <h2>NPR Article Status</h2>
   <div class="highlight"><b>Chris Arnold is actively writing.</b> He's asking detail questions about specific facts, timelines, and sourcing. This is very good.</div>
   <div class="item"><span class="badge sent">SENT</span>Main VASP evidence email + 10 attachments (Mar 17 2:16pm)</div>
@@ -104,7 +116,7 @@ a:hover { text-decoration: underline; }
   <div class="item"><span class="badge sent">SENT</span>Answered trailer timeline question (Mar 18 10:01am)</div>
   <div class="item"><span class="badge active">SHARED</span>New Key Findings Google Doc</div>
   <div class="item"><span class="badge active">SHARED</span>Google Drive evidence folder (35 FM docs cataloged)</div>
-  <div class="item"><span class="badge pending">PENDING</span>FOIA coordination — asked Chris if NPR filed one</div>
+  <div class="item"><span class="badge pending">PENDING</span>FOIA coordination &mdash; asked Chris if NPR filed one</div>
   <div class="note">Chris + Quil gave VA a response deadline of Mar 17. VA/FM still haven't responded to NPR.</div>
 </div>
 
@@ -112,11 +124,11 @@ a:hover { text-decoration: underline; }
 <div class="card red">
   <h2>Today &mdash; March 18</h2>
   <div class="item"><span class="badge done">DONE</span>Answer Chris's trailer timeline question</div>
-  <div class="item"><span class="badge send">SEND</span><b>Joseph Najmolhoda push-back</b> (draft r7139980969333755717)</div>
+  <div class="item"><span class="badge done">SENT</span><b>Joseph Najmolhoda push-back</b> + updated docs attached</div>
   <div class="item"><span class="badge send">SEND</span><b>Christie Corrigan follow-up</b> (draft r-7256989651564581416)</div>
-  <div class="item"><span class="badge pending">CHECK</span>Spokane County Court docket — no UD filed yet</div>
-  <div class="item"><span class="badge pending">DELETE</span>~23 superseded Gmail drafts (manual — see CLAUDE.md Sec 8)</div>
-  <div class="item"><span class="badge pending">CHECK</span>Bolt claim #BTPIPLXC — reply from support@boltinc.com?</div>
+  <div class="item"><span class="badge pending">CHECK</span>Spokane County Court docket &mdash; no UD filed yet</div>
+  <div class="item"><span class="badge pending">DELETE</span>~23 superseded Gmail drafts (manual &mdash; see CLAUDE.md Sec 8)</div>
+  <div class="item"><span class="badge pending">CHECK</span>Bolt claim #BTPIPLXC &mdash; reply from support@boltinc.com?</div>
 </div>
 
 <!-- VASP EVIDENCE CHAIN -->
@@ -141,11 +153,11 @@ a:hover { text-decoration: underline; }
 </div>
 
 <!-- KEY VIOLATIONS -->
-<div class="card purple">
+<div class="card mauve">
   <h2>Key Violations (Documented)</h2>
   <div class="item"><span class="badge new">NEW</span><b>FM's own no-foreclosure promise x2</b> &mdash; Jan 15 + Apr 30 letters</div>
   <div class="item"><span class="badge new">NEW</span><b>Warren NOE/RFI receipt</b> &mdash; FM ignored 179 days</div>
-  <div class="item"><span class="badge new">NEW</span><b>Potential retaliation</b> &mdash; complaint → foreclosure in 14 days</div>
+  <div class="item"><span class="badge new">NEW</span><b>Potential retaliation</b> &mdash; complaint &rarr; foreclosure in 14 days</div>
   <div class="item"><span class="badge new">NEW</span><b>Fee stacking</b> &mdash; $2,696 in fees, zero payments in FM records</div>
   <div class="item"><span class="badge active">CORE</span>VASP non-submission &mdash; held 3.5 months, never evaluated</div>
   <div class="item"><span class="badge active">CORE</span>VALERI non-submission &mdash; confirmed by VA on recorded line</div>
@@ -160,19 +172,19 @@ a:hover { text-decoration: underline; }
 <div class="card blue">
   <h2>Active Investigations &amp; Inquiries</h2>
   <div class="item"><span class="badge active">ACTIVE</span>VA OIG (Ref #2026-16691) &mdash; filed Feb 20</div>
-  <div class="item"><span class="badge active">ACTIVE</span>Sen. Murray casework &mdash; awaiting VA response</div>
-  <div class="item"><span class="badge active">ACTIVE</span>House VAC / Halle Sarkisian &mdash; relaying to FM</div>
+  <div class="item"><span class="badge active">ACTIVE</span>Sen. Murray casework &mdash; push-back sent Mar 18</div>
+  <div class="item"><span class="badge active">ACTIVE</span>House VAC / Halle Sarkisian &mdash; engaging VA directly</div>
   <div class="item"><span class="badge writing">WRITING</span><b>NPR / Chris Arnold + Quil Lawrence</b></div>
   <div class="item"><span class="badge filed">FILED</span>VA Public Comment M26-4 (FINAL v5, Mar 11)</div>
   <div class="item"><span class="badge pending">PENDING</span>House VAC Whistleblower Portal &mdash; not yet submitted</div>
 </div>
 
 <!-- CONTACTS STATUS -->
-<div class="card navy wide">
+<div class="card lavender wide">
   <h2>Contact Status &mdash; Who's Where</h2>
   <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px;">
     <div>
-      <div style="color: #7fa3d4; font-size: 11px; font-weight: 700; margin-bottom: 6px;">CONGRESSIONAL</div>
+      <div style="color: var(--lavender); font-size: 11px; font-weight: 700; margin-bottom: 6px;">CONGRESSIONAL</div>
       <div class="item"><span class="badge active">ACTIVE</span>Murray / Najmolhoda</div>
       <div class="item"><span class="badge active">ACTIVE</span>House VAC / Halle</div>
       <div class="item"><span class="badge active">CC'D</span>Baumgartner staff</div>
@@ -180,7 +192,7 @@ a:hover { text-decoration: underline; }
       <div class="item"><span class="badge pending">NOT FILED</span>Senate VAC</div>
     </div>
     <div>
-      <div style="color: #7fa3d4; font-size: 11px; font-weight: 700; margin-bottom: 6px;">LEGAL</div>
+      <div style="color: var(--lavender); font-size: 11px; font-weight: 700; margin-bottom: 6px;">LEGAL</div>
       <div class="item"><span class="badge declined">DECLINED</span>NJP (foreclosure)</div>
       <div class="item"><span class="badge declined">DECLINED</span>Huelsman</div>
       <div class="item"><span class="badge pending">CALL</span>WSBA attorneys</div>
@@ -189,7 +201,7 @@ a:hover { text-decoration: underline; }
       <div class="item"><span class="badge pending">CALL</span>NJP Eviction Defense</div>
     </div>
     <div>
-      <div style="color: #7fa3d4; font-size: 11px; font-weight: 700; margin-bottom: 6px;">OUTREACH / SUPPORT</div>
+      <div style="color: var(--lavender); font-size: 11px; font-weight: 700; margin-bottom: 6px;">OUTREACH / SUPPORT</div>
       <div class="item"><span class="badge sent">SENT</span>Christie Corrigan (no reply)</div>
       <div class="item"><span class="badge pending">DRAFT</span>Walsh, Pennington, Bahme</div>
       <div class="item"><span class="badge pending">DRAFT</span>Dr. Perry, Dr. Charboneau</div>
@@ -201,22 +213,22 @@ a:hover { text-decoration: underline; }
 </div>
 
 <!-- DOCUMENTS STATUS -->
-<div class="card gold">
+<div class="card teal">
   <h2>Key Documents &mdash; Current vs. Stale</h2>
-  <div class="item"><span class="badge stale">UPDATE</span><b>Legal Timeline v3</b> (Mar 13) &mdash; missing all weekend findings</div>
-  <div class="item"><span class="badge stale">UPDATE</span><b>CFPB Complaint</b> (Mar 14) &mdash; missing FM promise, Warren receipt</div>
-  <div class="item"><span class="badge stale">UPDATE</span><b>Advocacy Brief</b> (Mar 8) &mdash; missing VASP chain, retaliation, FM promise</div>
-  <div class="item"><span class="badge stale">UPDATE</span><b>Heroes Tracker v2</b> (Mar 14) &mdash; contact statuses outdated</div>
+  <div class="item"><span class="badge done">UPDATED</span><b>Advocacy Brief</b> (Mar 18) &mdash; FM promise, retaliation, urgency framing</div>
+  <div class="item"><span class="badge done">UPDATED</span><b>Legal Timeline v4</b> (Mar 18) &mdash; 12 new evidence entries added</div>
+  <div class="item"><span class="badge done">UPDATED</span><b>CFPB Complaint</b> (Mar 18) &mdash; 7 new sections added</div>
   <div class="item"><span class="badge done">CURRENT</span>CLAUDE.md (updated today, Session 11)</div>
   <div class="item"><span class="badge done">CURRENT</span>Public Comment FINAL v5 (submitted Mar 11)</div>
   <div class="item"><span class="badge done">CURRENT</span>FM Portal Catalog (Mar 16)</div>
   <div class="item"><span class="badge done">CURRENT</span>Warren Transcript Analysis (Mar 16)</div>
+  <div class="item"><span class="badge stale">UPDATE</span><b>Contact Tracker</b> (was "Heroes Tracker") &mdash; statuses outdated</div>
 </div>
 
 <!-- FILINGS NOT YET DONE -->
 <div class="card red">
   <h2>Filings &mdash; Not Yet Submitted</h2>
-  <div class="item"><span class="badge send">FILE</span><b>CFPB Complaint</b> &mdash; consumerfinance.gov/complaint</div>
+  <div class="item"><span class="badge send">FILE</span><b>CFPB Complaint</b> &mdash; UPDATED &amp; READY &mdash; consumerfinance.gov/complaint</div>
   <div class="item"><span class="badge send">FILE</span><b>WA AG Consumer Protection</b></div>
   <div class="item"><span class="badge send">FILE</span><b>FOIA x2</b> &mdash; VALERI (full lifecycle) + all recorded calls</div>
   <div class="item"><span class="badge send">FILE</span><b>House VAC Whistleblower Portal</b></div>
@@ -241,19 +253,19 @@ a:hover { text-decoration: underline; }
 </div>
 
 <!-- FAMILY HEALTH -->
-<div class="card wide" style="border-left-color: #e74c3c; background: linear-gradient(135deg, #1a1520, #1a2030);">
-  <h2 style="color: #e74c3c;">Family &amp; Health</h2>
+<div class="card wide" style="border-left-color: var(--maroon); background: linear-gradient(135deg, #1e1525, var(--mantle));">
+  <h2 style="color: var(--maroon);">Family &amp; Health</h2>
   <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-size: 12px;">
     <div>
-      <b style="color: #e74c3c;">Jerrod</b><br>
-      Seizures worsening, meds doubled. Cardiac ruled out → neurological/TBI. More imaging next week. Foreclosure destabilizing disability. Stepped back from NPR interviews.
+      <b style="color: var(--red);">Jerrod</b><br>
+      Seizures worsening, meds doubled. Cardiac ruled out &rarr; neurological/TBI. More imaging next week. Foreclosure destabilizing disability. Stepped back from NPR interviews.
     </div>
     <div>
-      <b style="color: #e67e22;">Home</b><br>
+      <b style="color: var(--peach);">Home</b><br>
       Furnace broken (CO exposure). $6,800 replacement. Using space heaters in below-freezing temps. Temperature regulation medically critical. Semper Fi originally paid for install (done wrong).
     </div>
     <div>
-      <b style="color: #f39c12;">Leann</b><br>
+      <b style="color: var(--yellow);">Leann</b><br>
       Cold chills/exhausted Mar 17. Chronic neck pain, brain fog, neurodivergent. MSW student (failed Fall '25 quarter due to crisis). Primary caregiver for Jerrod + grandmother (dementia) + son (IEP).
     </div>
   </div>
@@ -262,7 +274,6 @@ a:hover { text-decoration: underline; }
 </div>
 
 <script>
-// Countdown to April 3
 const april3 = new Date('2026-04-03T00:00:00');
 const now = new Date();
 const diff = Math.ceil((april3 - now) / (1000 * 60 * 60 * 24));
