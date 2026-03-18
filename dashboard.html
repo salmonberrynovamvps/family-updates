@@ -96,9 +96,24 @@ a:hover { text-decoration: underline; }
   .stat-row { flex-direction: column; }
   .contact-row { grid-template-columns: 1fr; }
 }
+#lock-screen { display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; }
+#lock-screen h2 { color: var(--mauve); margin-bottom: 12px; font-size: 18px; }
+#lock-screen p { color: var(--overlay1); font-size: 12px; margin-bottom: 16px; }
+#pin-input { background: var(--surface0); border: 2px solid var(--surface2); border-radius: 8px; color: var(--text); font-size: 24px; text-align: center; padding: 10px; width: 160px; letter-spacing: 8px; outline: none; }
+#pin-input:focus { border-color: var(--mauve); }
+#pin-error { color: var(--red); font-size: 12px; margin-top: 8px; visibility: hidden; }
+#dashboard-content { display: none; }
 </style>
 </head><body>
 
+<div id="lock-screen">
+  <h2>Ledford Case Dashboard</h2>
+  <p>Enter PIN to continue</p>
+  <input type="password" id="pin-input" maxlength="4" inputmode="numeric" pattern="[0-9]*" autofocus>
+  <div id="pin-error">Incorrect PIN</div>
+</div>
+
+<div id="dashboard-content">
 <h1>LEDFORD CASE DASHBOARD</h1>
 <p class="subtitle">VA Loan #0136811965 &bull; OIG Ref #2026-16691 &bull; Updated: March 18, 2026</p>
 
@@ -469,7 +484,37 @@ a:hover { text-decoration: underline; }
 
 </div>
 
+</div><!-- end dashboard-content -->
+
 <script>
+// PIN protection
+const PIN = '0801';
+const pinInput = document.getElementById('pin-input');
+const pinError = document.getElementById('pin-error');
+const lockScreen = document.getElementById('lock-screen');
+const dashboard = document.getElementById('dashboard-content');
+
+// Check if already unlocked this session
+if (sessionStorage.getItem('dashboard-unlocked') === 'true') {
+  lockScreen.style.display = 'none';
+  dashboard.style.display = 'block';
+}
+
+pinInput.addEventListener('input', function() {
+  if (this.value.length === 4) {
+    if (this.value === PIN) {
+      sessionStorage.setItem('dashboard-unlocked', 'true');
+      lockScreen.style.display = 'none';
+      dashboard.style.display = 'block';
+    } else {
+      pinError.style.visibility = 'visible';
+      this.value = '';
+      setTimeout(() => { pinError.style.visibility = 'hidden'; }, 2000);
+    }
+  }
+});
+
+// Countdown
 const april3 = new Date('2026-04-03T00:00:00');
 const now = new Date();
 const diff = Math.ceil((april3 - now) / (1000 * 60 * 60 * 24));
