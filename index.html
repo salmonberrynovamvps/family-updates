@@ -39,7 +39,6 @@
     margin-bottom: 1.5rem;
     font-style: italic;
   }
-  /* Table of Contents */
   .toc {
     background: #f7f7f7;
     border: 1px solid #e0e0e0;
@@ -71,9 +70,6 @@
     padding-left: 1.3rem;
   }
   .toc li { margin-bottom: 0.15rem; }
-
-  /* === THREE-TONE PALETTE === */
-  /* Blue family — informational, context, reassurance */
   .box-blue {
     background: #f0f4f8;
     border-left: 4px solid #3b6ea5;
@@ -93,7 +89,6 @@
     font-style: italic;
     color: #4a6a8a;
   }
-  /* Amber family — highlights, key evidence, important callouts */
   .box-amber {
     background: #fdf6e3;
     border-left: 4px solid #c49000;
@@ -102,7 +97,6 @@
     border-radius: 0 6px 6px 0;
     font-size: 0.95rem;
   }
-  /* Red — urgent only, used sparingly */
   .box-urgent {
     background: #fef5f4;
     border-left: 4px solid #c0392b;
@@ -111,8 +105,6 @@
     border-radius: 0 6px 6px 0;
     font-size: 0.95rem;
   }
-
-  /* Status grid */
   .status-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -131,7 +123,6 @@
     background: #fdf6e3;
     border-left: 3px solid #c49000;
   }
-
   h2 {
     font-size: 1.2rem;
     font-weight: 700;
@@ -185,9 +176,56 @@
   }
   .back-top a { color: #999; text-decoration: none; }
   .back-top a:hover { color: #3b6ea5; }
+
+  /* PIN Lock Screen */
+  #lock-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #fafafa;
+  }
+  #lock-screen h2 {
+    color: #3b6ea5;
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+    border: none;
+    padding: 0;
+  }
+  #lock-screen p {
+    color: #888;
+    font-size: 0.9rem;
+    margin-bottom: 1.2rem;
+  }
+  #pin-input {
+    background: #fff;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    color: #2c2c2c;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 0.6rem;
+    width: 160px;
+    letter-spacing: 8px;
+    outline: none;
+    font-family: Georgia, serif;
+  }
+  #pin-input:focus { border-color: #3b6ea5; }
+  #pin-error { color: #c0392b; font-size: 0.85rem; margin-top: 0.5rem; visibility: hidden; }
+  #page-content { display: none; }
 </style>
 </head>
 <body>
+
+<div id="lock-screen">
+  <h2>Ledford Family Updates</h2>
+  <p>Enter PIN to continue</p>
+  <input type="password" id="pin-input" maxlength="4" inputmode="numeric" pattern="[0-9]*" autofocus>
+  <div id="pin-error">Incorrect PIN</div>
+</div>
+
+<div id="page-content">
 <div class="container">
 
 <h1 id="top">Family &amp; Friends Update</h1>
@@ -204,7 +242,7 @@
 <p>Thank you for your continued support and for checking in. Here's where things stand since our last update on March 14.</p>
 
 <div class="box-blue">
-<strong>Quick version:</strong> NPR is about to publish, our congressional support has expanded, we've located critical evidence, and we're filing multiple federal complaints this week. We're still in the house. April 3 is our next key deadline.
+<strong>Quick version:</strong> NPR is about to publish, our congressional support has expanded, we've located critical evidence, and we're filing multiple federal complaints this week. We're still in the house. The VA contractor's voluntary "Cash for Keys" offer expires April 3 — we're not signing it (see <a href="#u3-dates">Key Dates</a> below for why).
 </div>
 
 <nav class="toc">
@@ -270,7 +308,7 @@
 <div class="status-grid">
 <div class="status-item"><strong>This week (by March 20):</strong> NPR publication expected</div>
 <div class="status-item"><strong>March 25:</strong> Follow-up with congressional contacts with updated documentation</div>
-<div class="status-item status-pending"><strong>April 3:</strong> Deadline for the "Cash for Keys" offer from the VA contractor. <strong>We are not signing this</strong> — it would require releasing all legal rights. This is not an eviction date.</div>
+<div class="status-item status-pending"><strong>April 3:</strong> The VA contractor's voluntary "Cash for Keys" offer expires. <strong>We are not signing this</strong> — it would require releasing all legal rights. This is <em>not</em> an eviction date. Even after this date, any actual eviction would require a separate court proceeding that hasn't been filed.</div>
 </div>
 
 <div class="back-top"><a href="#u3-top">↑ back to top</a></div>
@@ -473,7 +511,7 @@
 <p>An HVAC tech confirmed on Thursday that the furnace — installed by a contractor about two years ago — was put in incorrectly, broke internal parts, and has been releasing carbon monoxide into the house this entire time. That furnace was paid for by Semper Fi &amp; America's Fund (a national veteran service organization) as part of critical home repairs during our VA forbearance period. The same contractor also installed our AC wrong (pipes froze, had to come back). Replacement costs $6,800.</p>
 
 <div class="box-blue">
-<p><strong>Before anyone panics: we're okay.</strong> We can't use the furnace, but we have two space heaters going in the living room with sheets and blankets up over all the doorways to keep the heat in. We actually had to turn the space heaters <em>down</em> because we started overheating — so as long as things stay like this, we're managing just fine while we figure out next steps with our caseworker at Semper Fi &amp; America's Fund. It snowed again over the last 48 hours, but we're warm. Temperature regulation is medically important for Jerrod's conditions, and right now we've got it handled. 😅</p>
+<p><strong>Before anyone panics: we're okay.</strong> We can't use the furnace, but we have two space heaters going in the living room with sheets and blankets up over all the doorways to keep the heat in. We actually had to turn the space heaters <em>down</em> because we started overheating — so as long as things stay like this, we're managing just fine while we figure out next steps with our caseworker at Semper Fi &amp; America's Fund. It snowed again over the last 48 hours, but we're warm. Temperature regulation is medically important for Jerrod's conditions, and right now we've got it handled.</p>
 </div>
 
 <h3>Our kid's school stability.</h3>
@@ -563,6 +601,33 @@
 <p class="names">— Leann &amp; Jerrod</p>
 </div>
 
-</div>
+</div><!-- end .container -->
+</div><!-- end #page-content -->
+
+<script>
+(function() {
+  var pin = '0801';
+  if (sessionStorage.getItem('family-unlocked') === 'true') {
+    document.getElementById('lock-screen').style.display = 'none';
+    document.getElementById('page-content').style.display = 'block';
+    return;
+  }
+  var input = document.getElementById('pin-input');
+  var error = document.getElementById('pin-error');
+  input.addEventListener('input', function() {
+    if (input.value.length === 4) {
+      if (input.value === pin) {
+        sessionStorage.setItem('family-unlocked', 'true');
+        document.getElementById('lock-screen').style.display = 'none';
+        document.getElementById('page-content').style.display = 'block';
+      } else {
+        error.style.visibility = 'visible';
+        input.value = '';
+        setTimeout(function() { error.style.visibility = 'hidden'; }, 2000);
+      }
+    }
+  });
+})();
+</script>
 </body>
 </html>
