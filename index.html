@@ -1,642 +1,257 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ledford Family Update — March 21, 2026</title>
-<meta property="og:title" content="Ledford Family Update — March 21, 2026">
-<meta property="og:description" content="Update #3 on our VA foreclosure case — NPR publishing soon (5+ veteran families), congressional + VSO support growing, critical evidence documented, federal complaints filing this week.">
-<style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body {
-    font-family: Georgia, 'Times New Roman', serif;
-    line-height: 1.7;
-    color: #2c2c2c;
-    background: #fafafa;
-    padding: 0;
-  }
-  .container {
-    max-width: 680px;
-    margin: 0 auto;
-    background: #fff;
-    padding: 2.5rem 2rem;
-    min-height: 100vh;
-  }
-  @media (max-width: 700px) {
-    .container { padding: 1.5rem 1.2rem; }
-    h1 { font-size: 1.4rem; }
-  }
-  h1 {
-    font-size: 1.6rem;
-    font-weight: 700;
-    color: #1a1a1a;
-    margin-bottom: 0.3rem;
-    line-height: 1.3;
-  }
-  .date {
-    font-size: 0.95rem;
-    color: #666;
-    margin-bottom: 1.5rem;
-    font-style: italic;
-  }
-  .toc {
-    background: #f7f7f7;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    padding: 1.2rem 1.4rem;
-    margin: 1rem 0 2rem 0;
-    font-size: 0.9rem;
-    line-height: 1.9;
-  }
-  .toc-title {
-    font-weight: 700;
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: #888;
-    margin-bottom: 0.5rem;
-  }
-  .toc a {
-    color: #3b6ea5;
-    text-decoration: none;
-    border-bottom: 1px dotted #aac4de;
-  }
-  .toc a:hover {
-    color: #264d73;
-    border-bottom-style: solid;
-  }
-  .toc ol {
-    margin: 0;
-    padding-left: 1.3rem;
-  }
-  .toc li { margin-bottom: 0.15rem; }
-  .box-blue {
-    background: #f0f4f8;
-    border-left: 4px solid #3b6ea5;
-    padding: 1rem 1.2rem;
-    margin: 1.2rem 0;
-    border-radius: 0 6px 6px 0;
-    font-size: 0.95rem;
-    line-height: 1.65;
-  }
-  .box-blue-light {
-    background: #f6f9fc;
-    border-left: 3px solid #a3c1da;
-    padding: 0.7rem 1rem;
-    margin: 0.5rem 0 1.2rem 0;
-    border-radius: 0 4px 4px 0;
-    font-size: 0.9rem;
-    font-style: italic;
-    color: #4a6a8a;
-  }
-  .box-amber {
-    background: #fdf6e3;
-    border-left: 4px solid #c49000;
-    padding: 1rem 1.2rem;
-    margin: 1.2rem 0;
-    border-radius: 0 6px 6px 0;
-    font-size: 0.95rem;
-  }
-  .box-urgent {
-    background: #fef5f4;
-    border-left: 4px solid #c0392b;
-    padding: 1rem 1.2rem;
-    margin: 1.2rem 0;
-    border-radius: 0 6px 6px 0;
-    font-size: 0.95rem;
-  }
-  .status-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 0.5rem;
-    margin: 1rem 0;
-  }
-  .status-item {
-    padding: 0.6rem 1rem;
-    border-radius: 5px;
-    font-size: 0.93rem;
-    line-height: 1.5;
-    background: #f0f4f8;
-    border-left: 3px solid #3b6ea5;
-  }
-  .status-pending {
-    background: #fdf6e3;
-    border-left: 3px solid #c49000;
-  }
-  h2 {
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: #1a1a1a;
-    margin: 2.2rem 0 0.8rem 0;
-    padding-bottom: 0.3rem;
-    border-bottom: 2px solid #3b6ea5;
-  }
-  h3 {
-    font-size: 1.05rem;
-    font-weight: 700;
-    color: #333;
-    margin: 1.5rem 0 0.5rem 0;
-  }
-  p {
-    margin-bottom: 1rem;
-    font-size: 1rem;
-  }
-  strong { color: #1a1a1a; }
-  a { color: #3b6ea5; text-decoration: underline; }
-  a:hover { color: #264d73; }
-  ul {
-    margin: 0.8rem 0 1.2rem 1.5rem;
-    font-size: 1rem;
-  }
-  li { margin-bottom: 0.5rem; }
-  .signoff {
-    margin-top: 2.5rem;
-    font-style: italic;
-    color: #555;
-    font-size: 1rem;
-  }
-  .signoff .names {
-    font-style: normal;
-    font-weight: 700;
-    color: #1a1a1a;
-    font-size: 1.05rem;
-    margin-top: 0.5rem;
-  }
-  hr {
-    border: none;
-    border-top: 1px solid #e0e0e0;
-    margin: 2rem 0;
-  }
-  .back-top {
-    display: block;
-    text-align: right;
-    font-size: 0.8rem;
-    margin-top: 1rem;
-    color: #999;
-  }
-  .back-top a { color: #999; text-decoration: none; }
-  .back-top a:hover { color: #3b6ea5; }
-
-  /* PIN Lock Screen */
-  #lock-screen {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background: #fafafa;
-  }
-  #lock-screen h2 {
-    color: #3b6ea5;
-    margin-bottom: 0.5rem;
-    font-size: 1.3rem;
-    border: none;
-    padding: 0;
-  }
-  #lock-screen p {
-    color: #888;
-    font-size: 0.9rem;
-    margin-bottom: 1.2rem;
-  }
-  #pin-input {
-    background: #fff;
-    border: 2px solid #ccc;
-    border-radius: 8px;
-    color: #2c2c2c;
-    font-size: 1.5rem;
-    text-align: center;
-    padding: 0.6rem;
-    width: 160px;
-    letter-spacing: 8px;
-    outline: none;
-    font-family: Georgia, serif;
-  }
-  #pin-input:focus { border-color: #3b6ea5; }
-  #pin-error { color: #c0392b; font-size: 0.85rem; margin-top: 0.5rem; visibility: hidden; }
-  #page-content { display: none; }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ledford Family Updates</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      background-color: #fafafa;
+      color: #333;
+    }
+    
+    .lock-screen {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background-color: #fafafa;
+    }
+    
+    .lock-container {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 40px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      text-align: center;
+    }
+    
+    .lock-container h1 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: #3b6ea5;
+      font-weight: normal;
+      letter-spacing: 1px;
+    }
+    
+    .lock-container p {
+      font-size: 16px;
+      margin-bottom: 30px;
+      color: #666;
+    }
+    
+    .pin-input-wrapper {
+      margin-bottom: 20px;
+    }
+    
+    .pin-input-wrapper input {
+      font-size: 18px;
+      padding: 12px;
+      border: 2px solid #3b6ea5;
+      border-radius: 4px;
+      text-align: center;
+      width: 100%;
+      letter-spacing: 8px;
+      font-weight: bold;
+    }
+    
+    .pin-input-wrapper input:focus {
+      outline: none;
+      border-color: #2a4f7f;
+      box-shadow: 0 0 5px rgba(59, 110, 165, 0.3);
+    }
+    
+    .error-message {
+      display: none;
+      color: #d32f2f;
+      font-size: 14px;
+      margin-top: 15px;
+      padding: 10px;
+      background-color: #ffebee;
+      border-radius: 4px;
+      border-left: 3px solid #d32f2f;
+    }
+    
+    .error-message.show {
+      display: block;
+    }
+    
+    #page-content {
+      display: none;
+    }
+  </style>
+  <noscript>
+    <p style="text-align: center; padding: 40px; font-size: 18px;">
+      JavaScript is required to view this page. Please enable JavaScript in your browser settings.
+    </p>
+  </noscript>
 </head>
 <body>
-
-<div id="lock-screen">
-  <h2>Ledford Family Updates</h2>
-  <p>Enter PIN to continue</p>
-  <input type="password" id="pin-input" maxlength="4" inputmode="numeric" pattern="[0-9]*" autofocus>
-  <div id="pin-error">Incorrect PIN</div>
-</div>
-
-<div id="page-content">
-<div class="container">
-
-<h1 id="top">Family &amp; Friends Update</h1>
-<div class="date">Last updated March 20, 2026</div>
-
-<!-- PERSISTENT INFO BOX — authoritative context -->
-<div style="background: #f0f4f8; border: 2px solid #3b6ea5; border-radius: 8px; padding: 1.2rem 1.4rem; margin: 1.2rem 0 2rem 0; font-size: 0.95rem; line-height: 1.6;">
-  <div style="font-weight: 700; color: #3b6ea5; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem;">Important context</div>
-  <div style="font-style: italic; color: #333; margin-bottom: 0.6rem;">&ldquo;Thousands of veterans who took a forbearance are now at risk of losing their homes through no fault of their own.&rdquo;</div>
-  <div style="font-size: 0.88rem; color: #555; margin-bottom: 0.6rem;">&mdash; <a href="https://text.npr.org/1211855956" style="color: #3b6ea5;">NPR</a>, Chris Arnold. When NPR first uncovered the VA's mistake in 2023, approximately 40,000 veteran families were in danger of losing their homes. After multiple program cancellations and restarts, that number has ballooned: as of May 2025, <strong>nearly 90,000 VA loans are seriously past due, with 33,000 already in foreclosure</strong> (<a href="https://www.npr.org/2025/05/01/nx-s1-5382448/va-veterans-affairs-mortgages-foreclosure-vasp" style="color: #3b6ea5;">NPR, May 2025</a>).</div>
-  <div style="font-size: 0.88rem; color: #555; margin-bottom: 0.6rem;">Veteran families weren't allowed to simply resume making their mortgage payments &mdash; servicers and the VA put us into a cycle of perpetual pause, pending status, and moratorium processes that dragged on for months and years with no resolution. Each time a program was cancelled, the next one required starting over from scratch. We made every call, submitted every application, followed up on every deadline, and did everything we were told to do &mdash; often doing the servicer's job for them. None of it mattered, because the companies handling these loans weren't submitting the paperwork.</div>
-  <div style="font-size: 0.88rem; color: #555;">Our mortgage servicer, Freedom Mortgage, has been designated a <strong>&ldquo;repeat offender&rdquo;</strong> by the Consumer Financial Protection Bureau (<a href="https://www.consumerfinance.gov/" style="color: #3b6ea5;">CFPB</a>) and has been sanctioned by federal and state regulators <strong>repeatedly</strong> &mdash; including a <a href="https://www.justice.gov/" style="color: #3b6ea5;">$113 million DOJ settlement</a> for certifying loans that didn't meet standards, a <a href="https://www.nj.gov/oag/" style="color: #3b6ea5;">New Jersey AG consent order</a> for &ldquo;bait-and-switch&rdquo; refinancing targeting veterans, CFPB fines in 2019, 2023, and 2024, and a 2009 Washington State enforcement action against FM and its CEO personally. This is the company the VA entrusted with our loan. What happened to our family is part of a documented, systemic failure &mdash; not something we caused or could have prevented. NPR, Congress, the VA Inspector General, and major veteran service organizations including <a href="https://www.legion.org/" style="color: #3b6ea5;">The American Legion</a>, <a href="https://www.vfw.org/" style="color: #3b6ea5;">VFW</a>, <a href="https://www.dav.org/" style="color: #3b6ea5;">DAV</a>, and the <a href="https://www.nclc.org/" style="color: #3b6ea5;">National Consumer Law Center</a> are all actively investigating or advocating on this crisis.</div>
-</div>
-
-<!-- ============================================ -->
-<!-- UPDATE #3 — March 18, 2026                   -->
-<!-- ============================================ -->
-
-<h2 id="u3-top" style="border-bottom-color:#3b6ea5;">Update #3 — March 18, 2026</h2>
-
-<p>Hi everyone,</p>
-
-<p>Thank you for your continued support and for checking in. Here's where things stand since our last update on March 14.</p>
-
-<div class="box-blue">
-<strong>Quick version:</strong> NPR is about to publish, our congressional support has expanded, we've located critical evidence, and we're filing multiple federal complaints this week. We're still in the house. The VA contractor's voluntary "Cash for Keys" offer expires April 3 — we're not signing it (see <a href="#u3-dates">Key Dates</a> below for why).
-</div>
-
-<nav class="toc">
-<div class="toc-title">In this update</div>
-<ol>
-<li><a href="#u3-npr">NPR coverage is imminent</a></li>
-<li><a href="#u3-congress">Congressional support is growing</a></li>
-<li><a href="#u3-evidence">Critical evidence found</a></li>
-<li><a href="#u3-complaints">Federal complaints filing this week</a></li>
-<li><a href="#u3-health">Health &amp; housing conditions</a></li>
-<li><a href="#u3-dates">Key dates coming up</a></li>
-<li><a href="#u3-help">How you can help</a></li>
-</ol>
-</nav>
-
-<h3 id="u3-npr">1. NPR Coverage Is Imminent</h3>
-
-<p>The NPR investigative team (Chris Arnold and Quil Lawrence) is actively fact-checking and finalizing their story. A photographer visited us on March 9, and NPR gave both the VA and Freedom Mortgage a response deadline of March 17 — neither responded. As of March 20, Chris confirmed the story is expanding — NPR is now working with at least five veteran families, including ours. Publication is expected in the coming days.</p>
-
-<p>The scope of this story has grown significantly. Other veteran families across the country have reached out to NPR about similar experiences with the same servicers and the same VA failures.</p>
-
-<div class="box-amber">
-<p style="margin-bottom:0"><strong>Please hold off on sharing our story publicly until the NPR piece drops.</strong> Once it's live, we'll share the link and that's when broad sharing will have the most impact.</p>
-</div>
-
-<div class="back-top"><a href="#u3-top">↑ back to top</a></div>
-
-<h3 id="u3-congress">2. Congressional Support Is Growing</h3>
-
-<p>Senator Murray's office continues to be engaged and received our latest evidence package today (March 18). We've also connected with House Veterans' Affairs Committee staff, who have reached out to both Freedom Mortgage and the VA directly on our behalf with signed releases.</p>
-
-<p>As of March 20, we've expanded significantly: we submitted a formal report to the House Veterans' Affairs Committee Whistleblower Portal, and sent detailed case packages to two major national veteran service organizations — the Elizabeth Dole Foundation and Wounded Warrior Project — requesting direct government affairs intervention. Both organizations have government affairs teams with relationships at VA leadership level and on Capitol Hill. We're building institutional pressure from every direction available to us.</p>
-
-<div class="back-top"><a href="#u3-top">↑ back to top</a></div>
-
-<h3 id="u3-evidence">3. Critical Evidence Found</h3>
-
-<div class="box-amber">
-<p style="margin-bottom:0">This is a big one. We located Freedom Mortgage's own written promises that there would be no foreclosure — documented commitments made before the foreclosure action happened. This significantly strengthens the case and has been shared with all our congressional and legal contacts.</p>
-</div>
-
-<div class="back-top"><a href="#u3-top">↑ back to top</a></div>
-
-<h3 id="u3-complaints">4. Federal Complaints Filing This Week</h3>
-
-<p>We're submitting multiple federal complaints and requests this week, including filings with consumer protection agencies and FOIA requests for records related to our case. This creates formal paper trails with agencies that have oversight authority.</p>
-
-<div class="back-top"><a href="#u3-top">↑ back to top</a></div>
-
-<h3 id="u3-health">5. Health &amp; Housing Conditions</h3>
-
-<div class="box-urgent">
-<p>Jerrod's TBI-related seizures have worsened — his medication has been doubled, and he's undergoing ongoing neurological testing. This is a daily reality for him right now, and it directly impacts everything from his ability to work to basic safety at home.</p>
-<p style="margin-bottom:0">On top of that, our furnace is still broken (carbon monoxide exposure risk), which means we're running on space heaters during a medically critical time. Full replacement is approximately $6,800 — not a minor repair, and not something we can absorb right now.</p>
-</div>
-
-<p><strong>We're still in the home. We are not leaving voluntarily.</strong></p>
-
-<div class="back-top"><a href="#u3-top">↑ back to top</a></div>
-
-<h3 id="u3-dates">6. Key Dates Coming Up</h3>
-
-<div class="status-grid">
-<div class="status-item"><strong>Coming days:</strong> NPR publication — story now includes 5 veteran families</div>
-<div class="status-item"><strong>March 25:</strong> Follow-up with congressional contacts with updated documentation</div>
-<div class="status-item status-pending"><strong>April 3:</strong> The VA contractor's voluntary "Cash for Keys" offer expires. <strong>We are not signing this</strong> — it would require releasing all legal rights. This is <em>not</em> an eviction date. Even after this date, any actual eviction would require a separate court proceeding that hasn't been filed.</div>
-</div>
-
-<div class="back-top"><a href="#u3-top">↑ back to top</a></div>
-
-<h3 id="u3-help">How You Can Help</h3>
-
-<div class="box-blue">
-<ul style="margin-top:0.2rem">
-<li><strong>Wait for NPR, then share widely.</strong> We'll send the link as soon as it's live.</li>
-<li><strong>If you have connections</strong> to veterans' organizations, housing advocates, legal aid attorneys (especially VA/mortgage law), or journalists — we'd love an introduction.</li>
-<li><strong>If you're able to help with the furnace situation</strong>, please reach out directly.</li>
-<li><strong>Keep showing up.</strong> Your messages, check-ins, and support mean more than you know.</li>
-</ul>
-</div>
-
-<div class="signoff">
-<p>With love and stubbornness,</p>
-<p class="names">— Leann &amp; Jerrod Ledford</p>
-</div>
-
-<div class="back-top"><a href="#u3-top">↑ back to top</a></div>
-
-<!-- ============================================ -->
-<!-- DIVIDER BETWEEN UPDATE #3 AND UPDATE #2      -->
-<!-- ============================================ -->
-
-<hr>
-<div style="text-align:center; padding:1.5rem 0; color:#888; font-size:0.85rem; text-transform:uppercase; letter-spacing:0.08em;">
-— Previous Update —
-</div>
-<hr>
-
-<!-- ============================================ -->
-<!-- UPDATE #2 — March 14, 2026                   -->
-<!-- ============================================ -->
-
-<h2 id="u2-top" style="border-bottom-color:#3b6ea5;">Update #2 — March 14, 2026</h2>
-
-<p>It's been a busy two and a half weeks. There's a lot to cover, but we want everyone to have the full picture — especially because some of this may start moving fast.</p>
-
-<div class="box-blue">
-<strong>Quick version:</strong> We now have active investigations and inquiries at multiple levels of government — congressional committees, a federal inspector general, the Washington State Attorney General's office, and NPR investigative journalists who are publishing their first article next week. We're fighting to keep our home while all of this plays out. We still don't have a lawyer — that's the biggest gap. Jerrod's health is declining. We also just found out our furnace was installed wrong and has been leaking carbon monoxide. And there is a real possibility we may need to relocate within the next 1–2 weeks.
-</div>
-
-<nav class="toc">
-<div class="toc-title">In this update</div>
-<ol>
-<li><a href="#background">Background — the law that was supposed to fix this</a></li>
-<li><a href="#updates">What's happened since Feb 27</a> — NPR, House VA Committee, Sen. Murray, OIG, WA Attorney General, and more</li>
-<li><a href="#retaliation">The retaliation evidence</a></li>
-<li><a href="#hard-parts">The hard parts</a> — no attorney, Cash for Keys, Jerrod's health, furnace, school</li>
-<li><a href="#status">Where things stand right now</a></li>
-<li><a href="#next">What might happen next — and what we might need</a></li>
-</ol>
-</nav>
-
-<p>We know a lot of this involves agencies, laws, and processes that aren't part of most people's daily life, so we're going to explain what each of these things is and why it matters as we go.</p>
-
-<p>One thing to understand upfront: every one of these agencies, offices, and investigations has its own process, timeline, and preferred way of communicating. Some work by phone and text. Others are email-only or require formal written submissions through specific online portals. We're juggling all of it simultaneously — getting information at different times from different sources, sometimes conflicting, and then figuring out what to do with each piece as fast as we can. It's a lot of moving parts.</p>
-
-<hr>
-
-<h2 id="background">Background — The Law That Was Supposed to Fix This</h2>
-
-<p>To understand what's happening to us, it helps to know what was supposed to prevent it.</p>
-
-<p>When COVID hit, Congress authorized mortgage forbearance — a temporary pause on payments — through the CARES Act. This wasn't forgiveness; the money was still owed, but families could stabilize without losing their homes. The VA had a program called the VA Partial Claim Program that was supposed to help veteran families get caught up after forbearance by deferring the missed payments. That program ended. Then the VA created a second relief program called VASP (VA Servicing Purchase Program) to catch families who still needed help.</p>
-
-<div class="box-urgent">
-<p><strong>Here's where it broke:</strong> The VA unexpectedly terminated VASP on May 1, 2025 — with only 8 days notice. Veteran families who were in the middle of that process, including us, had the rug swept out from under them. Our mortgage servicer, Freedom Mortgage, held our complete application for over three months without ever submitting it to the VA, so we missed the deadline through no fault of our own.</p>
-</div>
-
-<div class="box-amber">
-<p><strong>The scale of this crisis:</strong> When NPR first started reporting, the number of affected veteran families was around <strong>40,000</strong>. As the VA's program failures cascaded — the first relief program ending, VASP being terminated with 8 days notice, the implementation gap after H.R. 1815 — that number grew to <strong>70,000–80,000 families</strong>. Current estimates are now approaching <strong>90,000 veteran families</strong> nationwide who have been caught in this mess. We are one of them.</p>
-</div>
-
-<p>Congress recognized this was a disaster. In July 2025, they passed the <strong>VA Home Loan Program Reform Act (H.R. 1815)</strong>, which created a new permanent partial claim option. Everyone thought that fixed the problem.</p>
-
-<div class="box-amber">
-<p style="margin-bottom:0"><strong>But here's what actually happened:</strong> The VA didn't implement the new law in time, and there was no regulation or enforcement ensuring that mortgage companies didn't take advantage of the gap. Freedom Mortgage and other servicers were free to keep foreclosing on veteran families during the months between the law passing and the VA actually standing up the new program. That's exactly what happened to us — and to tens of thousands of other families.</p>
-</div>
-
-<p>NPR has been investigating this broader VA mortgage servicing crisis for years. Their series covers the full scope of what's happening nationally:<br>
-<a href="https://www.npr.org/series/g-s1-75299/the-va-loan-calamity" target="_blank">NPR: The VA Loan Calamity</a></p>
-
-<div class="back-top"><a href="#top">↑ back to top</a></div>
-
-<hr>
-
-<h2 id="updates">What's Happened Since the Last Update (Feb 27)</h2>
-
-<h3>NPR Investigation</h3>
-
-<div class="box-amber">
-<p style="margin-bottom:0">NPR's investigative journalists came to our house on March 9 for a photo shoot. They've been investigating VA mortgage servicing failures for years, and they are now preparing a standalone article specifically about our case. <strong>The first article in this series is expected to publish next week — we'll share it when it's out.</strong></p>
-</div>
-
-<p>NPR is directly contacting the Secretary of the VA, Freedom Mortgage, and congressional offices as part of their reporting. But they've also gone beyond just reporting — they've used their contacts to connect us directly with key people who can help, including the House Veterans Affairs Committee staff and the King County VA Director who works with Senator Murray's office. That's not something journalists typically do; they usually maintain separation between reporting and advocacy. The fact that they're making these connections on our behalf — using their own professional relationships to open doors for us — speaks to how seriously they view this case and how clearly the evidence supports what we've been saying. We're grateful for it.</p>
-
-<div class="box-blue-light"><strong>Why this matters:</strong> National media attention creates public accountability — agencies and companies respond differently when reporters are asking questions on the record. And NPR actively connecting us with congressional and government contacts has dramatically accelerated our ability to reach the people who can actually intervene.</div>
-
-<h3>House Veterans Affairs Committee</h3>
-<p>This is the congressional committee in the U.S. House of Representatives that has <strong>oversight authority over the VA</strong> — meaning they can investigate VA actions, question VA leadership, and pressure agencies to act. NPR connected us with Halle Sarkisian, the staff director for the Subcommittee on Economic Opportunity (under Chairman Mike Bost). We submitted privacy releases and our full case documentation. Halle said she would relay our case directly to Freedom Mortgage and report back. We've asked the committee to request that the VA — which currently owns our house — direct its property management contractor to pause any move-out enforcement or eviction proceedings while investigations are active.</p>
-
-<div class="box-blue">
-<p style="margin-bottom:0"><strong>Rep. Baumgartner's office</strong> (our district representative) has two staffers — Jane Scarborough and Isabela Schandlbauer — who have been on every single call, meeting, and email with Halle and the House committee. They're working jointly together, not separately. Having our district representative's staff actively involved alongside the national committee means there's both local and federal-level accountability happening in real time.</p>
-</div>
-
-<div class="box-blue-light"><strong>Why this matters:</strong> Congressional committee staff have direct lines to agency leadership that individual citizens don't have. When a committee asks the VA questions, the VA has to answer. This isn't a suggestion box — it's congressional oversight.</div>
-
-<h3>Senator Murray's Office</h3>
-<p>NPR also connected us with Joseph Najmolhoda, the King County Director of Veterans Affairs, who also serves as Senator Patty Murray's VSO (Veteran Service Organization) liaison. He personally filed a congressional inquiry with the VA on our behalf back on Feb 27. We sent him updated case documents and the same eviction-pause request on March 13. Senator Murray sits on the Senate Veterans Affairs Committee, which gives her office additional weight when asking the VA to review a case.</p>
-
-<div class="box-blue-light"><strong>Why this matters:</strong> A congressional inquiry means the VA has to formally respond — they can't just ignore it or let it sit in a queue.</div>
-
-<h3>VA Office of Inspector General (OIG)</h3>
-<p>The OIG is the VA's internal watchdog — an independent office that investigates fraud, waste, abuse, and employee misconduct within the VA. We filed our complaint on February 20 (Reference #2026-16691).</p>
-
-<p>When we contacted them and filed the report, they were immediately responsive and took us seriously — which was honestly a relief after months of getting the runaround from other VA offices. It felt like we were finally talking to people who actually wanted to know what happened. The complaint is active, and we plan to follow up with them on Monday.</p>
-
-<div class="box-blue-light"><strong>Why this matters:</strong> An open OIG investigation means the VA knows its own watchdog is looking at this. The OIG can issue findings that lead to disciplinary action against VA employees, policy changes, or referrals for further investigation — and it creates a permanent official record that can't be swept under the rug.</div>
-
-<h3>WA Attorney General — Military &amp; Veteran Legal Assistance (OMVLA)</h3>
-<p>We filed a report with the WA Attorney General's OMVLA office, which provides legal assistance to military and veteran families. They confirmed receipt, reviewed our income (we qualify — about 184% of the federal poverty level), and referred us to Northwest Justice Project for free legal representation. We're now following back up with OMVLA for next steps since NJP declined (more on that below).</p>
-
-<h3>WA Attorney General — Consumer Protection Division</h3>
-<div class="box-amber">
-<p>We're also filing a separate complaint with the WA AG's Consumer Protection Division. This is different from the OMVLA veteran assistance — this targets Freedom Mortgage's deceptive business practices directly under Washington State law. Washington's Consumer Protection Act allows for <strong>treble damages (3x actual damages) up to $25,000 per violation, plus mandatory attorney fees.</strong> We have multiple documented violations.</p>
-<p style="margin-bottom:0"><em>This creates state-level regulatory pressure independently of our federal complaints. It's another direction the pressure is coming from.</em></p>
-</div>
-
-<h3>Public Comment on VA Policy</h3>
-<p>When federal agencies create new rules or programs, they're required by law to accept public comments before finalizing them. The VA is currently writing the implementation handbook for the new partial claim program created by H.R. 1815 — the law described above that Congress passed to fix the foreclosure crisis after the VA unexpectedly ended the earlier relief programs.</p>
-
-<p>We submitted a 16-page public comment with 12 specific recommendations, citing our case as a real-world example of what happens when these programs aren't applied in time and mortgage companies aren't held accountable during the gap.</p>
-
-<div class="box-blue-light"><strong>Why this matters:</strong> Our comment is now part of the permanent federal regulatory record — VA staff, policymakers, and future researchers will see it. It also demonstrates that we're not just fighting for ourselves; we're contributing to the policy solution so this doesn't keep happening to other veteran families.</div>
-
-<h3>Additional filings we're preparing this week:</h3>
-<div class="box-blue">
-<ul style="margin-top:0.2rem">
-<li><strong>Senate Veterans Affairs Committee</strong> — the Senate counterpart to the House committee, giving us oversight pressure from both chambers of Congress</li>
-<li><strong>Senator Maria Cantwell's office</strong> — our other U.S. Senator, filing a constituent case so both WA senators are engaged</li>
-<li><strong>CFPB (Consumer Financial Protection Bureau)</strong> — the federal agency that directly enforces mortgage servicing laws. They have authority over the specific violations Freedom Mortgage committed and can take enforcement action independently.</li>
-<li><strong>WA State Dept. of Veterans Affairs</strong> — contacting Director David Puente Jr. for emergency VSO referrals and state-level coordination</li>
-<li><strong>FOIA requests</strong> (Freedom of Information Act) — we're formally requesting the VA's own internal records for our loan. This includes whether Freedom Mortgage ever actually submitted our file into the VA's tracking system (two VA employees have confirmed to us that they didn't — but we need the official records). We're also requesting recordings of our phone calls with VA staff, including one where a VA supervisor acknowledged on a VA-recorded line that the VA "dropped the ball" on our case.</li>
-</ul>
-</div>
-
-<div class="box-amber">
-<p style="margin-bottom:0">Each of these creates an additional layer of accountability. Agencies and companies respond to pressure, and right now we're building pressure from every direction we can.</p>
-</div>
-
-<div class="back-top"><a href="#top">↑ back to top</a></div>
-
-<hr>
-
-<h2 id="retaliation">The Retaliation Evidence</h2>
-
-<p>While combing through years of documentation to build our legal case, we identified what appears to be <strong>direct retaliation</strong> by Freedom Mortgage.</p>
-
-<div class="box-amber">
-<p><strong>The sequence:</strong></p>
-<p><strong>July 8, 2025:</strong> Jerrod emails the VA, explicitly calling Freedom Mortgage's conduct "predatory." The VA loan technician forwards that email to Freedom Mortgage the same day through official VA channels.</p>
-<p><strong>July 22, 2025:</strong> Fourteen days later, Freedom Mortgage refers our loan to a foreclosure attorney. This is the formal start of foreclosure proceedings — they made this decision <strong>before</strong> Congress passed the law that would have required them to evaluate us for relief first.</p>
-<p><strong>July 30, 2025:</strong> Eight days after Freedom Mortgage's foreclosure referral, Congress signs H.R. 1815 into law — the VA Home Loan Program Reform Act. This law would have required Freedom Mortgage to evaluate us under the new partial claim program before pursuing foreclosure. But Freedom Mortgage had already pulled the trigger.</p>
-<p style="margin-bottom:0"><strong>The pattern:</strong> Veteran files complaint through VA channels → VA forwards complaint directly to the company the veteran is complaining about → company fast-tracks foreclosure 14 days later → Congress passes a law 8 days after that which would have protected the veteran, but the company already moved first. The documentation for all of these events is in our file. We've flagged this to NPR and to the House Veterans Affairs Committee.</p>
-</div>
-
-<div class="back-top"><a href="#top">↑ back to top</a></div>
-
-<hr>
-
-<h2 id="hard-parts">The Hard Parts</h2>
-
-<h3>We have no attorney.</h3>
-<div class="box-urgent">
-<p style="margin-bottom:0">Northwest Justice Project — Washington's free legal aid organization for foreclosure cases — declined our case on March 11. They said they can't take cases of this scope. A foreclosure attorney that NPR connected us with also declined and referred us back to NJP. Both dead ends. We have a list of private attorneys to start calling next week, and we're asking every contact we have for referrals. The WA Consumer Protection Act's mandatory attorney fees provision should make this case attractive for a private attorney on contingency (meaning they get paid from the outcome, not upfront). <strong>This is our most urgent gap right now.</strong></p>
-</div>
-
-<h3>VRM sent us a "Cash for Keys" offer.</h3>
-<p>VRM is Vendor Resource Management — the property management company the VA contracts with to handle properties it owns after foreclosure. They offered $3,500 to voluntarily move out by April 3. The catch: signing it permanently releases ALL of our legal rights and claims against every party — VA, Freedom Mortgage, the trustee, everyone. All of them. Forever. <strong>We are not signing it.</strong></p>
-
-<p>We sent an extension request asking for 90 days while investigations are active. Their letter itself said extensions could be requested, so we did. We're waiting to hear back from their legal team.</p>
-
-<div class="box-blue">
-<p><strong>Important context on the April 3 date:</strong> This is <em>not</em> an eviction date. It's the deadline on a voluntary offer that we aren't accepting because it requires us to give up every legal claim we have. Even if they deny the extension, they would still have to go to Spokane County court and file a formal unlawful detainer (eviction) proceeding — that's a separate legal process with its own timeline. We obviously don't want that — it can move fast once filed, days to a week or so at each step — but no one is showing up April 3 to change our locks.</p>
-<p style="margin-bottom:0">That said, we are preparing for the possibility that things could move quickly after that date, which is why we're sharing all of this now.</p>
-</div>
-
-<p>We've asked every congressional and committee contact to request that the VA (which owns the property) direct VRM to pause enforcement. The VA owns the house. They control VRM's contract. They can pause this whenever they choose to.</p>
-
-<h3>Jerrod's health is getting worse.</h3>
-<div class="box-amber">
-<p>Jerrod is rated 100% Totally and Permanently Disabled (T&amp;P TDIU) through the VA — service-connected TBI, seizure disorder, PTSD, functional neurological disorder, and autonomic dysfunction from two deployments to Afghanistan. That's not a number on paper; it shapes every part of daily life and what "accessible housing" actually means for our family.</p>
-<p style="margin-bottom:0">Seizures are increasing — his medications have been doubled. They evaluated him for cardiac issues this week and ruled that out, which means the symptoms are neurological/TBI-based. More diagnostics and imaging are scheduled for next week. The stress and fear from the foreclosure is actively destabilizing his disability. This is worse than the last time we faced housing instability — he's more medically fragile now than he was in 2018–2019.</p>
-</div>
-
-<h3>Our furnace was installed wrong and has been leaking carbon monoxide.</h3>
-<p>An HVAC tech confirmed on Thursday that the furnace — installed by a contractor about two years ago — was put in incorrectly, broke internal parts, and has been releasing carbon monoxide into the house this entire time. That furnace was paid for by Semper Fi &amp; America's Fund (a national veteran service organization) as part of critical home repairs during our VA forbearance period. The same contractor also installed our AC wrong (pipes froze, had to come back). Replacement costs $6,800.</p>
-
-<div class="box-blue">
-<p><strong>Before anyone panics: we're okay.</strong> We can't use the furnace, but we have two space heaters going in the living room with sheets and blankets up over all the doorways to keep the heat in. We actually had to turn the space heaters <em>down</em> because we started overheating — so as long as things stay like this, we're managing just fine while we figure out next steps with our caseworker at Semper Fi &amp; America's Fund. It snowed again over the last 48 hours, but we're warm. Temperature regulation is medically important for Jerrod's conditions, and right now we've got it handled.</p>
-</div>
-
-<h3>Our kid's school stability.</h3>
-<p>Our son has an active IEP (Individualized Education Program) through Spokane Public Schools. Keeping him in his current school through the end of this school year is a priority — any relocation has to account for that. He's already dealing with the stress of all this at home; pulling him out of school mid-year would compound it. If we have to move, we'll need to figure out transportation to keep his placement stable.</p>
-
-<div class="back-top"><a href="#top">↑ back to top</a></div>
-
-<hr>
-
-<h2 id="status">Where Things Stand Right Now</h2>
-
-<div class="box-blue">
-<p style="margin-bottom:0"><strong>We're still in the house. No eviction has been filed.</strong> We have active investigations and inquiries at multiple levels:</p>
-</div>
-
-<div class="status-grid">
-<div class="status-item"><strong>VA Office of Inspector General</strong> — federal watchdog, following up Monday</div>
-<div class="status-item"><strong>House Veterans Affairs Committee</strong> — congressional oversight, actively engaging</div>
-<div class="status-item"><strong>Rep. Baumgartner's office</strong> — district representative, two staffers on all calls/meetings jointly with House committee</div>
-<div class="status-item"><strong>Senator Patty Murray's office</strong> — congressional inquiry filed, awaiting VA response</div>
-<div class="status-item"><strong>WA Attorney General</strong> — OMVLA veteran assistance + Consumer Protection complaint</div>
-<div class="status-item"><strong>NPR investigative reporting</strong> — first article expected next week</div>
-<div class="status-item status-pending"><strong>In progress:</strong> Senate VA Committee, Senator Cantwell, CFPB, WA State VA Director, FOIA records requests</div>
-</div>
-
-<div class="box-amber">
-<p style="margin-bottom:0">The VA currently owns our house. Under federal law (38 U.S.C. § 3732), they have the authority to sell it back to us, lease it to us, or restructure — without needing any third-party negotiation. <strong>If VA wants to fix this, they can.</strong> That's what we're pushing for through every channel available.</p>
-</div>
-
-<div class="back-top"><a href="#top">↑ back to top</a></div>
-
-<hr>
-
-<h2 id="next">What Might Happen Next — And What We Might Need</h2>
-
-<div class="box-urgent">
-<p>We want to be upfront: <strong>there is a real possibility we may need to relocate quickly in the next 1–2 weeks</strong> if the VRM extension is denied and things escalate. We're preparing for that possibility while simultaneously fighting to stay.</p>
-</div>
-
-<h3>What we're already doing on the relocation/emergency side:</h3>
-<p>We are coordinating with national veteran service organizations for emergency assistance, relocation support, and housing — including the same organizations that helped us in 2018–2019 when Jerrod first started having TBI seizures and we were failed by the VA the first time around, and we had to temporarily become homeless and relocate. We've been through this before. We know how to navigate these systems, and we're already activating those channels. Organizations we're working with or reaching out to include: Semper Fi &amp; America's Fund, Code of Support Foundation, Wounded Warrior Project, Elizabeth Dole Foundation, American Legion, and DAV.</p>
-
-<p>We're also working with VSO contacts on getting help hiring professional movers, because Jerrod and I physically aren't able to do that ourselves right now between his health issues and my own injuries.</p>
-
-<div class="box-blue">
-<p style="margin-bottom:0"><strong>Emergency backup option:</strong> A fellow veteran (Andrew) has offered to lend us his 28-foot travel trailer, which would be parked on another veteran friend's (Vernon's) rural property. It's a real option, but it comes with challenges — we'd need to build/put up fencing to separate our dogs from Vernon's (we have most of the supplies already), and being rural means figuring out internet, water, laundry, and shower access. It's a backup plan, not a first choice — but it exists and we're grateful for it.</p>
-</div>
-
-<h3>What we may need help with, if things move fast:</h3>
-<div class="box-amber">
-<ul style="margin-top:0.2rem">
-<li><strong>Emergency temporary housing leads</strong> — must be pet-friendly. We have 4 dogs (three large livestock guardian dogs and one Bernese Mountain Dog) and 3 cats. The animals are non-negotiable; they're family.</li>
-<li><strong>Temporary fostering or boarding</strong> for any of the animals if we end up in a situation where we can't keep them all together immediately</li>
-<li><strong>Storage options or space</strong> for our belongings</li>
-<li><strong>Short-term financial bridge</strong> — temporary loans or help covering a first/last month rent gap, moving supplies, or other costs if there's a lag between displacement and VSO assistance kicking in</li>
-<li><strong>Gas/transportation help</strong> for school commute if we relocate — keeping our son in his current school through end of year is a priority</li>
-<li><strong>Help packing on a scheduled day</strong> if we get a move date — we'd coordinate a specific day with as much notice as possible</li>
-<li><strong>Attorney referrals</strong> — foreclosure or consumer protection, WA state or national</li>
-<li><strong>Connections</strong> to veteran service organizations, congressional offices, or housing advocates</li>
-</ul>
-</div>
-
-<h3>What we want to be really clear about:</h3>
-<p>We are not asking family and friends to carry this financially or logistically. We know a lot of you have your own situations and crises going on right now too. We're not expecting anyone to show up and pack boxes or write checks — we're not expecting anyone to hire movers for us or fund our relocation. The VSO network and advocacy channels are the primary infrastructure here, not personal favors.</p>
-
-<p>We're sharing all of this so you have the full picture and aren't caught off guard if we call in a couple weeks saying "we need to move by Thursday."</p>
-
-<p>Any help anyone is able and willing to offer is genuinely appreciated — but it is absolutely not expected. We will never hold it against anyone. Ever.</p>
-
-<div class="box-blue">
-<p style="margin-bottom:0">If you do have connections to <strong>attorneys, veteran service organizations, congressional offices, or housing advocates</strong> — those referrals are honestly the single most valuable thing anyone can offer right now.</p>
-</div>
-
-<h3>Why we didn't sound the alarm sooner.</h3>
-<p>We know some of this feels sudden. The truth is, we were working through the system the way you're supposed to — submitting applications, following up, trusting the process. We didn't know Freedom Mortgage had never submitted our file to the VA. We didn't know the VA's own tracking system showed no record of a completed foreclosure as late as January 2026 — we weren't even notified the sale had happened until 26 days after it was done. By the time we had the full picture of what had gone wrong and how many things had been broken, we were already in crisis mode trying to build the case and find help.</p>
-
-<p>If anyone in your life asks why this happened or questions whether this was somehow our fault: it wasn't. We did everything we were supposed to do, and multiple systems failed simultaneously. That's not an excuse — it's what the evidence shows, and it's what the OIG, congressional committees, and NPR are now investigating.</p>
-
-<div class="box-amber">
-<p style="margin-bottom:0"><strong>One ask about sharing:</strong> Please hold off on posting any of this publicly or on social media until the NPR article publishes (expected next week). The timing matters for the investigation and for maximum impact. You're welcome to share the NPR series link (<a href="https://www.npr.org/series/g-s1-75299/the-va-loan-calamity" target="_blank">The VA Loan Calamity</a>) and to share this update privately with anyone you think might be able to help — just not publicly yet. We'll let you know when the article is out and it's go-time.</p>
-</div>
-
-<hr>
-
-<div class="signoff">
-<p>We'll keep updating as things develop. We're exhausted but we're still in it.</p>
-<p class="names">— Leann &amp; Jerrod</p>
-</div>
-
-</div><!-- end .container -->
-</div><!-- end #page-content -->
-
-<script>
-(function() {
-  var pin = '0801';
-  if (sessionStorage.getItem('family-unlocked') === 'true') {
-    document.getElementById('lock-screen').style.display = 'none';
-    document.getElementById('page-content').style.display = 'block';
-    return;
-  }
-  var input = document.getElementById('pin-input');
-  var error = document.getElementById('pin-error');
-  input.addEventListener('input', function() {
-    if (input.value.length === 4) {
-      if (input.value === pin) {
-        sessionStorage.setItem('family-unlocked', 'true');
-        document.getElementById('lock-screen').style.display = 'none';
-        document.getElementById('page-content').style.display = 'block';
-      } else {
-        error.style.visibility = 'visible';
-        input.value = '';
-        setTimeout(function() { error.style.visibility = 'hidden'; }, 2000);
+  <div class="lock-screen" id="lock-screen">
+    <div class="lock-container">
+      <h1>Ledford Family Updates</h1>
+      <p>Enter PIN to continue</p>
+      <div class="pin-input-wrapper">
+        <input type="password" id="pin-input" maxlength="4" inputmode="numeric" placeholder="••••" autocomplete="off">
+      </div>
+      <div class="error-message" id="error-message">
+        Incorrect PIN. Please try again.
+      </div>
+    </div>
+  </div>
+
+  <div id="page-content"></div>
+
+  <script>
+    // Encrypted data stored as base64
+    const ENCRYPTED_DATA = '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';
+    const SALT = '4HzW9WyqhHFPRUDUCKb7kw==';
+    const IV = 'wLzKGZav+jKt4NJC';
+    
+    // PBKDF2 key derivation using Web Crypto API
+    async function derivePBKDF2Key(pin, salt, iterations = 100000) {
+      const encoder = new TextEncoder();
+      const pinBuffer = encoder.encode(pin);
+      const saltBuffer = Uint8Array.from(atob(salt), c => c.charCodeAt(0));
+      
+      const baseKey = await crypto.subtle.importKey(
+        'raw',
+        pinBuffer,
+        { name: 'PBKDF2' },
+        false,
+        ['deriveKey', 'deriveBits']
+      );
+      
+      const derivedKey = await crypto.subtle.deriveKey(
+        {
+          name: 'PBKDF2',
+          salt: saltBuffer,
+          iterations: iterations,
+          hash: 'SHA-256'
+        },
+        baseKey,
+        { name: 'AES-GCM', length: 256 },
+        false,
+        ['decrypt']
+      );
+      
+      return derivedKey;
+    }
+    
+    // AES-GCM decryption
+    async function decryptContent(pin) {
+      try {
+        const derivedKey = await derivePBKDF2Key(pin, SALT);
+        
+        // Decode base64 encrypted data
+        const encryptedBytes = Uint8Array.from(atob(ENCRYPTED_DATA), c => c.charCodeAt(0));
+        const ivBytes = Uint8Array.from(atob(IV), c => c.charCodeAt(0));
+        
+        // Split: ciphertext + auth tag (last 16 bytes)
+        const ciphertext = encryptedBytes.slice(0, encryptedBytes.length - 16);
+        const authTag = encryptedBytes.slice(encryptedBytes.length - 16);
+        
+        // Combine for decryption
+        const dataToDecrypt = new Uint8Array([...ciphertext, ...authTag]);
+        
+        const decrypted = await crypto.subtle.decrypt(
+          { name: 'AES-GCM', iv: ivBytes },
+          derivedKey,
+          dataToDecrypt
+        );
+        
+        return new TextDecoder().decode(decrypted);
+      } catch (error) {
+        console.error('Decryption error:', error);
+        return null;
       }
     }
-  });
-})();
-</script>
+    
+    // Handle PIN input
+    const pinInput = document.getElementById('pin-input');
+    const errorMessage = document.getElementById('error-message');
+    const lockScreen = document.getElementById('lock-screen');
+    const pageContent = document.getElementById('page-content');
+    
+    pinInput.addEventListener('input', async (e) => {
+      if (e.target.value.length === 4) {
+        const decrypted = await decryptContent(e.target.value);
+        
+        if (decrypted) {
+          // Success: hide lock screen, show content
+          errorMessage.classList.remove('show');
+          
+          // Parse decrypted content
+          const parser = new DOMParser();
+          const doc = parser.parseFromString(decrypted, 'text/html');
+          
+          // Extract and inject style
+          const styleEl = doc.querySelector('style');
+          if (styleEl) {
+            const newStyle = document.createElement('style');
+            newStyle.textContent = styleEl.textContent;
+            document.head.appendChild(newStyle);
+          }
+          
+          // Extract content (everything after <style>)
+          const contentHtml = decrypted.replace(/<style[^>]*>[sS]*?</style>/, '');
+          pageContent.innerHTML = contentHtml;
+          
+          // Store PIN in sessionStorage for page reload
+          sessionStorage.setItem('ledford-pin', e.target.value);
+          
+          // Hide lock, show content
+          lockScreen.style.display = 'none';
+          pageContent.style.display = 'block';
+        } else {
+          // Wrong PIN
+          errorMessage.classList.add('show');
+          e.target.value = '';
+        }
+      } else {
+        errorMessage.classList.remove('show');
+      }
+    });
+    
+    // Check sessionStorage on page load
+    window.addEventListener('DOMContentLoaded', async () => {
+      const storedPin = sessionStorage.getItem('ledford-pin');
+      if (storedPin) {
+        const decrypted = await decryptContent(storedPin);
+        
+        if (decrypted) {
+          const parser = new DOMParser();
+          const doc = parser.parseFromString(decrypted, 'text/html');
+          
+          const styleEl = doc.querySelector('style');
+          if (styleEl) {
+            const newStyle = document.createElement('style');
+            newStyle.textContent = styleEl.textContent;
+            document.head.appendChild(newStyle);
+          }
+          
+          const contentHtml = decrypted.replace(/<style[^>]*>[sS]*?</style>/, '');
+          pageContent.innerHTML = contentHtml;
+          
+          lockScreen.style.display = 'none';
+          pageContent.style.display = 'block';
+        } else {
+          sessionStorage.removeItem('ledford-pin');
+        }
+      }
+    });
+    
+    // Auto-focus PIN input
+    pinInput.focus();
+  </script>
 </body>
 </html>
